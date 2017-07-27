@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style type='text/css'>
+    .banner-container {
+      width: 100%;
+      height: 405px;
+      background-image: url("https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/IT/spotlight-2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .banner-title-container {
+      position: relative;
+      overflow: hidden;
+      width: 600px;
+      height: 400px;
+    }
+    #tar-slide-one {
+    position: absolute;
+    opacity: .7;
+    font-size: 34px;
+    color: white;
+    top: 240px;
+    text-align: center;
+    font-weight: 900;
+    left: -330px;
+    width: 180px;
+    margin-left: 100px;
+    height: 50px;
+    background: #293896;
+    -webkit-animation: tar-slide-one 3s forwards;
+    -webkit-animation-delay: 4s;
+    animation: tar-slide-one 3s forwards;
+    animation-delay: 4s;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    }
+
+
+@-webkit-keyframes tar-slide-one {
+    100% { left: 0; }
+}
+
+@keyframes tar-slide-one {
+    100% { left: 0; }
+}
+
+
+    #tar-slide-two {
+    height: 50px;
+    position: absolute;
+    opacity: .7;
+    font-size: 34px;
+    color: white;
+    font-weight: 900;
+    left: -430px;
+    width: auto;
+    margin-left: 150px;
+    height: 50px;
+    top: 305px;
+    background: #293896;
+    font-weight: 900;
+    letter-spacing: 1px;
+    -webkit-animation: tar-slide-two 2s forwards;
+    -webkit-animation-delay: 4s;
+    animation: tar-slide-two 2s forwards;
+    animation-delay: 4s;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    }
+
+
+@-webkit-keyframes tar-slide-two {
+    100% { left: 0; }
+}
+
+@keyframes tar-slide-two {
+    100% { left: 0; }
+}
+
+    </style>
+    <script type='text/javascript'>
+    $(document).ready(function() {
+      function applyJquery() {
+    // ------------ Together We Grow WP#: 2
+    $("#WebPartWPQ2").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ2").css("background-color", "#293896").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("padding-left", "15px").css("color", "white").css("text-transform", "none");
+    $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+
+    // -------- Calender  WP#: 5
+    $("#WebPartWPQ5").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ5").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ5 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#MSOZoneCell_WebPartWPQ5").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartWPQ5 > div.ms-rtestate-field > div").css("width", "455px").css("max-width","455px");
+
+    // --------- Trending Pages WP#: 4
+    $("#ctl00_ctl39_g_3918d17c_063c_4e4d_b99a_004b51a5a501_csr > ul > li").css("padding-left", "15px");
+    $("#WebPartWPQ4").css("background", "transparent").css("background-color", "transparent").css("width", "100%");
+    $("#WebPartTitleWPQ4").css("background-color", "#F89C04").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartWPQ4_ChromeTitle").css("width", "100%");
+    $("#ctl00_ctl39_g_3918d17c_063c_4e4d_b99a_004b51a5a501_csr > ul").css("padding-left", "15px").css("padding-top", "13px");
+    $("#ctl00_ctl39_g_3918d17c_063c_4e4d_b99a_004b51a5a501_csr1_2lines_pictureLink").css("font-size", "24px").css("color", "#1a96b5").css("margin-top", "-7px").css("padding-bottom", "7px");
+    $("#ctl00_ctl39_g_3918d17c_063c_4e4d_b99a_004b51a5a501_csr2_2lines_pictureLink").css("font-size", "24px").css("color", "#1a96b5").css("margin-top", "-7px").css("padding-bottom", "7px");
+    $("#ctl00_ctl39_g_3918d17c_063c_4e4d_b99a_004b51a5a501_csr3_2lines_pictureLink").css("font-size", "24px").css("color", "#1a96b5").css("margin-top", "-7px").css("padding-bottom", "7px");
+    $("#ctl00_ctl39_g_3918d17c_063c_4e4d_b99a_004b51a5a501_csr4_2lines_pictureLink").css("font-size", "24px").css("color", "#1a96b5").css("margin-top", "-7px").css("padding-bottom", "7px");
+    $("#ctl00_ctl39_g_3918d17c_063c_4e4d_b99a_004b51a5a501_csr5_2lines_pictureLink").css("font-size", "24px").css("color", "#1a96b5").css("margin-top", "-7px").css("padding-bottom", "7px");
+
+    // ------ Banner WP#:
+    $("#MSOZoneCell_WebPartWPQ6").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
+
+    // ---- tools WP#: 3
+    $("#ctl00_ctl39_g_4c473e2d_7627_46be_b948_7e0c8a7094ab_csr > ul > li:nth-child(-n + 50) > div").css("padding-left", "15px");
+    $("#ctl00_ctl39_g_4c473e2d_7627_46be_b948_7e0c8a7094ab_csr > ul > li:nth-child(-n + 50) > div > a > img").css("width", "30px").css("height", "30px");
+    $("#ctl00_ctl39_g_4c473e2d_7627_46be_b948_7e0c8a7094ab_csr > ul > li:nth-child(-n + 50) > div.cbs-Item > div > a").css('font-family', 'AkzidenzGroteskPro-Bold');
+    $("#ctl00_ctl39_g_4c473e2d_7627_46be_b948_7e0c8a7094ab_csr > ul > li:nth-child(1) > div").css("padding-top", "15px");
+    $("#WebPartTitleWPQ3").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#MSOZoneCell_WebPartWPQ3").css("background", "transparent").css("background-color", "transparent").css("padding", "0px");
+    $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $(".hrseparator").css("width", "90%");
+
+    // $("#ctl00_ctl39_g_4c473e2d_7627_46be_b948_7e0c8a7094ab_csr > ul").css("padding-left", "15px");
+
+    $("#ctl00_ctl39_g_4c473e2d_7627_46be_b948_7e0c8a7094ab_csr > ul > li").css("padding-top", "15px");
+    $("#ctl00_ctl39_g_4c473e2d_7627_46be_b948_7e0c8a7094ab_csr > ul > li:nth-child(26) > div.AllLink").css("display","none");
+
+    // Logo
+      $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
+      $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
+  }
+    setTimeout(applyJquery, 1500);
+
+  });
+    </script>
+  </head>
+  <body>
+    <div class='banner-container'>
+      <div class='banner-title-container'>
+        <div id='tar-slide-one'>Tools &amp;</div>
+        <div id='tar-slide-two'>Resources</div>
+    </div>
+    </div>
+
+
+  </body>
+</html>

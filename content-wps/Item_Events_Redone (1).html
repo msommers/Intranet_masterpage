@@ -1,0 +1,156 @@
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>EventsV2</title>
+<style type='text/css'>
+.upcoming-events h4 {
+  font-family: 'Century Gothic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+.upcoming-events-contents {
+  border: 1px black solid;
+  width: 312px;
+  min-height: 20px;
+}
+.upcoming-events-content {
+  display: inline-block;
+  margin-bottom: 21px;
+  padding-right: 25px;
+}
+.cal-date {
+  float: left;
+  text-align: center;
+  background: #F2F2F2;
+  width: 54px;
+}
+.cal-date span {
+  display: block;
+}
+.cal-date .cal-day{
+  font-size: 30px;
+  color: #1a96b5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: -7px;
+}
+.cal-date .cal-month{
+  font-size: 10px;
+  color: #575d6c;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.event-details {
+  margin-top: -3px;
+  margin-left: 65px;
+}
+.event-details .event-title {
+  padding-top: 5px;
+}
+
+.event-details .event-title a {
+  color: #0b1f8f !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+.event-details .event-title a:hover {
+  color: #fe402c !important;
+}
+
+.event-details .event-description {
+  font-size: 15px;
+  color: #454a59;
+  line-height: 15px;
+  padding-top: 1px;
+}
+
+.upcoming-events-contents .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+
+.ue-title-container {
+  color: white;
+  background-color: #54C0EB;
+  height: 42px;
+
+}
+.ue-title-text-container {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Link URL':'Path','EventDate':'EventDateOWSDATE','Title':'Title','Desc':'DescriptionOWSMTXT'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">This Item Display Template will display each managed proeprty in a column and is used in conjunction with the Control List Table template.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://insulet.sharepoint.com/sites/IntranetDev/_catalogs/masterpage/Display Templates/Content Web Parts/Item_Events_Redone.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+<div class="upcoming-events">
+<!--#_
+	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+	var siteCollectionURL = SP.PageContextInfo.get_siteAbsoluteUrl();
+	var siteURL = _spPageContextInfo.webServerRelativeUrl;
+	var linkURL = $getItemValue(ctx, "Path");
+	linkURL.overrideValueRenderer($urlHtmlEncode);
+	var title = $getItemValue(ctx, "Title");
+	var desc = $getItemValue(ctx, "Desc");
+	var eventDate = $getItemValue(ctx, "EventDate");
+	var corDate = new Date(eventDate);
+	//var eventMonth = monthNames[eventDate.value.getUTCMonth()];
+	//var eventDay = eventDate.value.getUTCDay()-1;
+
+	var eventMonth = monthNames[corDate.getMonth()];
+	var eventDay = corDate.getDate();
+	//console.log(eventDate+":"+title);
+
+_#-->
+<!-- <div class="ue-title-container"><div class='ue-title-text-container'>Calender &amp; Events</div></div> -->
+	<div class="upcoming-events-contents">
+		<div class="upcoming-events-content">
+			<div class='cal-date'>
+				<span class='cal-day'></span>
+				<span class='cal-month'></span>
+			</div>
+			<div class='event-details'>
+				<div class='event-title'><h5><a href='_#= $htmlEncode(linkURL) =#_' title="Title"></a></h5></div>
+				<div class='event-description'></div>
+			</div>
+		</div>
+
+
+
+			<!--#_
+// Check if it is the last item to process, then display URL
+var currentItemIdx = ctx.CurrentItemIdx + 1;
+
+var pageURL = siteURL + "/Lists/Calendar/calendar.aspx";
+if(currentItemIdx === ctx.CurrentGroup.RowCount) {
+_#-->
+<br>
+<div class="AllLink"> <a href="_#= $htmlEncode(pageURL) =#_">View All</a></div>
+<!--#_
+}
+_#-->
+
+	</div>
+</div>
+</body>
+</html>

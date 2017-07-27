@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style type='text/css'>
+    .banner-container {
+      width: 100%;
+      height: 575px;
+      /*background-color: grey;*/
+      background-image: url("https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Clean%20homepage%20collage.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .home-banner-title-container {
+        position: relative;
+        overflow: hidden;
+        width: 900px;
+        height: 440px;
+        /*border: 10px black solid;*/
+      }
+    #home-slide-one {
+    position: absolute;
+    opacity: .7;
+    font-size: 54px;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    top: 135px;
+    left: -730px;
+    width: 360px;
+    margin-left: 320px;
+    height: 80px;
+    background: #293896;
+    -webkit-animation: home-slide-one 2s forwards;
+    -webkit-animation-delay: 3s;
+    animation: home-slide-one 2s forwards;
+    animation-delay: 3s;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    }
+
+    @-webkit-keyframes home-slide-one {
+        100% { left: 0; }
+    }
+
+    @keyframes home-slide-one {
+        100% { left: 0; }
+    }
+
+    #home-slide-two {
+    position: absolute;
+    opacity: .7;
+    font-size: 54px;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    top: 230px;
+    left: -730px;
+    width: 310px;
+    margin-left: 160px;
+    height: 80px;
+    background: #293896;
+    -webkit-animation: home-slide-two 2s forwards;
+    -webkit-animation-delay: 3s;
+    animation: home-slide-two 2s forwards;
+    animation-delay: 3s;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    }
+
+
+    @-webkit-keyframes home-slide-two {
+        100% { left: 0; }
+    }
+
+    @keyframes home-slide-two {
+        100% { left: 0; }
+    }
+
+    #home-slide-three {
+    position: absolute;
+    opacity: .7;
+    font-size: 54px;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    top: 325px;
+    left: -890px;
+    width: 610px;
+    margin-left: 230px;
+    height: 80px;
+    background: #293896;
+    -webkit-animation: home-slide-three 2s forwards;
+    -webkit-animation-delay: 3s;
+    animation: home-slide-three 2s forwards;
+    animation-delay: 3s;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    }
+
+
+    @-webkit-keyframes home-slide-three {
+        100% { left: 0; }
+    }
+
+    @keyframes home-slide-three {
+        100% { left: 0; }
+    }
+
+.btn-continer {
+  float: right;
+display: inline-block;
+margin-top: 75px;
+  height: auto;
+  width: 200px;
+
+
+}
+.prev-btn {
+    width: 60px;
+    height: 60px;
+    float: right;
+    background-size: cover;
+    opacity: .72;
+  	background-color: #293896;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 3px solid white;
+
+}
+
+.next-btn {
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  float: right;
+  margin-left: -5px;
+  background-size: cover;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  opacity: .72;
+	background-color: #293896;
+  border-left: 3px solid white;
+}
+.next-img {
+  width: 40px;
+  padding-left: 15px;
+  padding-top: 10px;
+  height: 40px;
+}
+
+.prev-img {
+  width: 40px;
+  padding-left: 15px;
+  padding-top: 10px;
+  height: 40px;
+
+}
+.img-turn {
+
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      margin-right: 5px;
+}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript'>
+    "use strict";
+
+$(document).ready(function() {
+  function applyJquery() {
+    var currentImage = "";
+    var images = [
+      "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-1.jpg')",
+      "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-2.jpg')",
+      "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-3.jpg')",
+      "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-4.jpg')",
+      "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-5.jpg')"
+    ];
+
+
+
+
+
+
+  $(".next-btn").on("click", function(){
+    for (var i = 0; i < images.length; i++ ) {
+      var currentImage = images[i];
+      var counter;
+
+        if (counter = 0) {
+          $(".banner-container").css("background-image", "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-1.jpg')");
+          counter++;
+        } else if (counter = 1) {
+          $(".banner-container").css("background-image",   "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-2.jpg')");
+            counter++;
+        }
+          else if (counter = 2){
+          $(".banner-container").css("background-image", "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-3.jpg')");
+            counter++;
+        }
+        else if (counter = 3){
+        $(".banner-container").css("background-image", "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-4.jpg')");
+          counter++;
+        }
+        else if (counter = 4){
+        $(".banner-container").css("background-image", "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Banners/Home/spotlight-5.jpg')");
+          counter++;
+        }
+        else if (counter = 5) {
+        $(".banner-container").css("background-image", "url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Clean%20homepage%20collage.png')");
+          counter++;
+        }
+        else {
+          var counter = 0;
+        }
+      alert(counter);
+        // $(".banner-container").removeProp("background-image");
+        // $(".banner-container").css("background-image", currentImage);
+          alert(currentImage);
+      return
+        // console.log(currentImage);
+
+
+        //   return;
+
+
+
+
+
+    // };
+
+  });
+
+
+  }
+    setTimeout(applyJquery, 1000);
+
+  });
+//
+
+    </script>
+  </head>
+  <body>
+    <div class='banner-container'>
+      <div class='home-banner-title-container'>
+          <div id='home-slide-one'>together</div><br>
+          <div id='home-slide-two'>we</div>
+          <div id='home-slide-three'>grow</div>
+      </div>
+      <div class='btn-continer'>
+        <div class='next-btn'><img class='next-img' src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/003-right-chevron.png'></div>
+        <div class='prev-btn img-turn '><img class='prev-img' src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/003-right-chevron.png'></div>
+      </div>
+    </div>
+  </body>
+</html>

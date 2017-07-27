@@ -1,0 +1,71 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="OurTeam"></div>
+	<script>
+
+		$(document).ready(function(){
+				'use strict';
+                //console.log("Hello from Web Part");
+				$.ajax({
+					url: _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Our%20Team')/items?$select=*&$select=InsuletTeamMember/Title,InsuletTeamMember/JobTitle,InsuletTeamMember/EMail,InsuletTeamMember/Department,InsuletTeamMember/WorkPhone&$expand=InsuletTeamMember/ID&$top=5&$OrderBy=InsuletOrder%20asc",
+					method: "GET",
+					headers: { "Accept": "application/json; odata=verbose" },
+					success: getUserSuccess,
+					error: getUserError
+				});
+        console.log(_spPageContextInfo.webAbsoluteUrl);
+				function getUserSuccess(data, request) {
+					var html = [];
+					var results = data.d.results;
+					console.log(data.d);
+					var siteCollectionURL = SP.PageContextInfo.get_siteServerRelativeUrl();
+					var siteURL = _spPageContextInfo.webServerRelativeUrl;
+					//var image =  "https://nam.delve.office.com/mt/v3/people/profileimage?size=L&userId=";
+					var image = "https://insulet.sharepoint.com/sites/IntranetDev/_layouts/userphoto.aspx?size=S&accountname=";
+					var mysite = "https://insulet-my.sharepoint.com/_layouts/15/me.aspx?p=";
+					var membersPage = siteURL + "/Pages/Members.aspx";
+					var icon = siteCollectionURL + "/Style%20Library/Insulet/Images/people.jpg";
+
+						for (var i = 0; i < results.length; i++) {
+							html.push("<div class='contact-item'><div class='contact-profile-image'><img src='" + image + results[i].InsuletTeamMember.EMail + "'></div>");
+							if(results[i].InsuletTeamMember.Title){
+								html.push("<ul class='contact-profile-details'><li class='contact-name'><a href=\"#\" onclick=\"javascript:OpenInNewTab('"+mysite+results[i].InsuletTeamMember.EMail+"'); return false;\">" + results[i].InsuletTeamMember.Title + "</a></li>");
+							}
+							if(results[i].InsuletTeamMember.JobTitle){
+								html.push("<li class='contact-description'>" + results[i].InsuletTeamMember.JobTitle + "</li>");
+							}
+							if(results[i].InsuletTeamMember.EMail ){
+								html.push("<li class='contact-email'><a href='" + "mailto:" + results[i].InsuletTeamMember.EMail + "'>" + results[i].InsuletTeamMember.EMail + "</a></li>");
+							}
+							if(results[i].InsuletTeamMember.WorkPhone){
+								html.push("<li class=''>" + "Office Phone: " + results[i].InsuletTeamMember.WorkPhone + "</li>");
+							}
+								html.push("</ul>");
+										}
+									if(i = results.length){
+										html.push("<hr style='border: 0;height: 1px;background: #eee;'><div  class='AllLink'>View All</a></div>");
+
+
+					}
+					$('#OurTeam').append(html.join(''));
+
+				}
+
+
+				function getUserError(error) {
+//					alert("error");
+					html.push("<div>Please refresh the page and try again</div>");
+				}
+		});
+
+			function OpenInNewTab(url) {
+			  var win = window.open(url, '_blank');
+			  win.focus();
+			}
+	</script>
+</body>
+</html>

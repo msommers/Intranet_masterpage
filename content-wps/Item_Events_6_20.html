@@ -1,0 +1,217 @@
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>Events</title>
+<style type='text/css'>
+.calender-and-events-container {
+	height: 371px;
+	width: 433px;
+	background-color: #D8D8D8;
+	margin: 0;
+	font-family: "AkzidenzGroteskPro";
+
+}
+.calender-title-container {
+	background-color: #54C0EB;
+	height: 42px;
+	width: 100%;
+	color: white;
+	text-align: left;
+	font-family: "AkzidenzGroteskPro";
+	opacity: 0.63;
+}
+
+.calender-title-text {
+	padding-left: 10px;
+	text-align: left;
+	color: white;
+	font-family: "AkzidenzGroteskPro";
+	font-size: 20px;
+	padding-top: 10px;
+
+}
+#one:hover{
+	background-color: white;
+	color: black;
+}
+#two:hover{
+	background-color: white;
+	color: black;
+}
+#three:hover{
+	background-color: white;
+	color: black;
+}
+#four:hover{
+	background-color: white;
+	color: black;
+}
+
+.highlighted {
+background-color: white;
+color: black;
+}
+
+.calender-content {
+	/*border: 1px #4A4A4A solid;*/
+	background-color: #4A4A4A;
+	color: white;
+	width: 353px;
+	height: 329px;
+	float: left;
+}
+.event-description {
+	padding-right: 20px;
+	color: white;
+}
+.event-dates {
+	background-color: #000000;
+	color: white;
+	width: auto;
+}
+.event-title {
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+}
+.spacer {
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.future-date-li {
+	width: 80px;
+	border: 1px black solid;
+	height: 80px;
+	float: left;
+	opacity: 0.77;
+	background-color: #9B9B9B;
+	color: white;
+	text-overflow: clip;
+
+
+}
+
+.future-dates-ul {
+	list-style-type: none;
+	bottom: 16px;
+	position: relative;
+	/*top: 26px;*/
+	width: 40px;
+	float:left;
+	right: 40px;
+	/*margin-top: 43px;*/
+}
+</style>
+
+<script type="text/javascript">
+"use strict";
+$(()=> {
+	$(".option-2").hide();
+	$(".option
+
+
+
+
+
+	").hide();
+	$("#one").click(function(){
+		$(".option-3").hide();
+		$(".option-2").hide();
+		$(".option-1").show();
+	});
+	$("#two").click(function(){
+		$(".option-3").hide();
+		$(".option-1").hide();
+		$(".option-2").show();
+	});
+	$("#three").click(function(){
+		$(".option-1").hide();
+		$(".option-2").hide();
+		$(".option-3").show();
+	});
+
+});
+
+
+
+
+
+// $("#button-one").on("click", function(){
+//   $(".event-title").text("title 1 ");
+//   $(".event-dates").text("dates 1");
+//   $(".event-description").text("descr 1");
+// });
+
+</script>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Link URL':'Path','EventDate':'EventDateOWSDATE','Title':'Title','Desc':'DescriptionOWSMTXT'</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">This Item Display Template will display each managed proeprty in a column and is used in conjunction with the Control List Table template.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://insulet.sharepoint.com/sites/IntranetDev/_catalogs/masterpage/Display Templates/Content Web Parts/Item_Events.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+<div class="upcoming-events">
+<!--#_
+	var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+	var siteCollectionURL = SP.PageContextInfo.get_siteAbsoluteUrl();
+	var siteURL = _spPageContextInfo.webServerRelativeUrl;
+	var linkURL = $getItemValue(ctx, "Path");
+	linkURL.overrideValueRenderer($urlHtmlEncode);
+	var title = $getItemValue(ctx, "Title");
+	var desc = $getItemValue(ctx, "Desc");
+	var eventDate = $getItemValue(ctx, "EventDate");
+	var corDate = new Date(eventDate);
+	//var eventMonth = monthNames[eventDate.value.getUTCMonth()];
+	//var eventDay = eventDate.value.getUTCDay()-1;
+
+	var eventMonth = monthNames[corDate.getMonth()];
+	var eventDay = corDate.getDate();
+	//console.log(eventDate+":"+title);
+
+_#-->
+	<div class="upcoming-events-contents">
+		<div class='calender-and-events-container'>
+      <div class='calender-title-container'>
+        <div class='calender-title-text'>Calender & Events</div>
+      </div>
+      <div class='future-dates-container'>
+        <ul class='future-dates-ul'>
+          <li id="one" class='future-date-li'>_#= $htmlEncode(eventDay) =#_<br>_#= $htmlEncode(eventMonth) =#_</li>
+          <li id="two" class='future-date-li'>${item.day}<br>${item.month}</li>
+          <li id="three" class='future-date-li'>${item.day}<br>${item.month}</li>
+          <li class='future-date-li see-more'><a href='#'>See More</a></li>
+        </ul>
+      </div>
+
+
+        </div>
+			<!--#_
+// Check if it is the last item to process, then display URL
+var currentItemIdx = ctx.CurrentItemIdx + 1;
+
+var pageURL = siteURL + "/Lists/Calendar/calendar.aspx";
+if(currentItemIdx === ctx.CurrentGroup.RowCount) {
+_#-->
+<br>
+<div class="AllLink"> <a href="_#= $htmlEncode(pageURL) =#_">View All</a></div>
+<!--#_
+}
+_#-->
+
+	</div>
+</div>
+</body>
+</html>

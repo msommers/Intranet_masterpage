@@ -1,0 +1,64 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<style type='text/css'>
+.event-item {
+  width: 400px;
+  height: 400px;
+  color: white;
+  background-color: black;
+}
+.event-title {
+  color: white;
+}
+</style>
+</head>
+<body>
+    <div id="CalendarAndEvents"></div>
+	<script>
+
+		$(document).ready(function(){
+				'use strict';
+        //console.log("Hello from Web Part");
+        $.ajax({
+          url: _spPageContextInfo.webAbsoluteUrl + "_api/search/query?querytext='ContentTypeId:0x010200C707C00C0A1627419D34C39123CE4EF900E5046E9586504846BDA4F0B35359434D'&enablestemming=false&selectproperties='Path%2cUrl%2cTitle%2cWrite%2cWorkId'&clienttype='ContentSearchRegular'",
+          method: "GET",
+          headers: { "Accept": "application/json; odata=verbose" },
+          success: getEventsSuccess,
+          error: getEventsError
+        });
+        console.log(_spPageContextInfo.webAbsoluteUrl);
+
+        function getEventsSuccess(data, request) {
+					let arry = [];
+					var results = data.d.results;
+					console.log(data.d);
+					var siteCollectionURL = SP.PageContextInfo.get_siteServerRelativeUrl();
+					var siteURL = _spPageContextInfo.webServerRelativeUrl;
+					//var image =  "https://nam.delve.office.com/mt/v3/people/profileimage?size=L&userId=";
+					var image = "https://insulet.sharepoint.com/sites/IntranetDev/_layouts/userphoto.aspx?size=S&accountname=";
+					var mysite = "https://insulet-my.sharepoint.com/_layouts/15/me.aspx?p=";
+					var membersPage = siteURL + "/Pages/Members.aspx";
+					var icon = siteCollectionURL + "/Style%20Library/Insulet/Images/people.jpg";
+
+						for (var i = 0; i < results.length; i++) {
+							arry.push("<div class='event-item'><div class='event-title'>" + results[i].Event.Title + "</div></div>" );
+            }
+					$('#CalendarAndEvents').append(arry.join(''));
+
+				}
+
+
+				function getEventsError(error) {
+//					alert("error");
+					arry.push("<div>Please refresh the page and try again</div>");
+				}
+		});
+
+			function OpenInNewTab(url) {
+			  var win = window.open(url, '_blank');
+			  win.focus();
+			}
+	</script>
+</body>
+</html>

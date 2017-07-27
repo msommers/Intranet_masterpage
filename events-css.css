@@ -1,0 +1,80 @@
+.upcoming-events h4 {
+  font-family: 'Century Gothic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+.upcoming-events-contents {
+  width: 100%;
+  min-height: 20px;
+}
+.upcoming-events-content {
+  display: inline-block;
+  margin-bottom: 21px;
+  padding-right: 25px;
+}
+.cal-date {
+  float: left;
+  text-align: center;
+  background: #F2F2F2;
+  width: 54px;
+}
+.cal-date span {
+  display: block;
+}
+.cal-date .cal-day{
+  font-size: 30px;
+  color: #1a96b5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: -7px;
+}
+.cal-date .cal-month{
+  font-size: 10px;
+  color: #575d6c;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.event-details {
+  margin-top: -3px;
+  margin-left: 65px;
+}
+.event-details .event-title {
+  padding-top: 5px;
+}
+
+.event-details .event-title a {
+  color: #0b1f8f !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+.event-details .event-title a:hover {
+  color: #fe402c !important;
+}
+
+.event-details .event-description {
+  font-size: 15px;
+  color: #454a59;
+  line-height: 15px;
+  padding-top: 1px;
+}
+
+.upcoming-events-contents .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+
+<div class="upcoming-events-contents">
+  <div class="upcoming-events-content">
+    <div class='cal-date'>
+      <span class='cal-day'>_#= $htmlEncode(eventDay) =#_</span>
+      <span class='cal-month'>_#= $htmlEncode(eventMonth) =#_</span>
+    </div>
+    <div class='event-details'>
+      <div class='event-title'><h5><a href='_#= $htmlEncode(linkURL) =#_' title="Title">_#= $htmlEncode(title) =#_</a></h5></div>
+      <div class='event-description'>_#= $htmlEncode(desc) =#_</div>
+    </div>
+  </div>

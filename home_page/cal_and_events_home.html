@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type='text/css'>
+    .bold-text {
+      font-family: 'AkzidenzGroteskPro-Bold';
+    }
+    .cal-and-events-container {
+      width: 100%;
+      background-color: #D8D8D8;
+      height: 300px;
+      max-height: 300px;
+    }
+    .future-dates-container {
+      width: 20%;
+      /*background-color: #9B9B9B;*/
+      height: 100%;
+      float: left;
+      clear: right;
+      color: white;
+    }
+    .event-content {
+      height: 100%;
+      width: 80%;
+      background-color: #4A4A4A;
+      display: inline-block;
+      float: left;
+    }
+    .future-event-container {
+      width: 100%;
+      height: 20%;
+      /*border-bottom: 1px black solid;*/
+    }
+    .see-more-container {
+      width: 100%;
+      height: 20%;
+    }
+    .event-name-container {
+      width: 100%;
+      height: 20%;
+      background-color: #4A4A4A;
+
+
+    }
+    .event-date-container {
+      width: 100%;
+      height: 20%;
+      background-color: #000000;
+      /*opacity: 0.44;*/
+
+    }
+    .event-description-container {
+      width: 100%;
+      height: 60%;
+      background-color: #4A4A4A;
+      color: white;
+      text-overflow: clip;
+
+    }
+    .event-name-text-container {
+      padding: 6% 5% 10% 5%;
+      color: white;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+    .event-date-text-container {
+      padding: 2.5% 0% 0% 5%;
+      color: white;
+    }
+    .event-description-text-container {
+      padding: 10% 5% 10% 5%;
+      color: white;
+
+
+    }
+    #event-one:hover,
+    #event-two:hover,
+    #event-three:hover,
+    #event-four:hover,
+    #see-more:hover {
+      background-color: black;
+      color: white;
+    }
+    .future-event-text-container {
+      padding-top: 10%;
+      text-align: center;
+
+    }
+    .highlighted {
+      background-color: black;
+      color: white;
+    }
+    .odd {
+      background-color: #D8D8D8;
+    }
+    .even {
+      background-color: #D8D8D8;
+    }
+
+    </style>
+
+    <script type='text/javascript'>
+    "use strict";
+    $(()=>{
+      $(".event-two").hide();
+      $(".event-three").hide();
+      $(".event-four").hide();
+      $("#event-one").click(function(){
+        $("#event-one").removeClass("odd");
+        $("#event-two").addClass("even");
+        $("#event-three").addClass("odd");
+        $("#event-four").addClass("even");
+
+        $("#event-one").addClass("highlighted");
+        $("#event-two").removeClass("highlighted");
+        $("#event-three").removeClass("highlighted");
+        $("#event-four").removeClass("highlighted");
+        $("#see-more").removeClass("highlighted");
+        $(".event-one").show();
+        $(".event-two").hide();
+        $(".event-three").hide();
+        $(".event-four").hide();
+      });
+      $("#event-two").click(function(){
+        $("#event-two").removeClass("even");
+        $("#event-one").addClass("odd");
+        $("#event-three").addClass("odd");
+        $("#event-four").addClass("even");
+        $("#event-two").addClass("highlighted");
+        $("#event-one").removeClass("highlighted");
+        $("#event-three").removeClass("highlighted");
+        $("#event-four").removeClass("highlighted");
+        $("#see-more").removeClass("highlighted");
+        $(".event-two").show();
+        $(".event-one").hide();
+        $(".event-three").hide();
+        $(".event-four").hide();
+      });
+      $("#event-three").click(function(){
+        $("#event-three").removeClass("odd");
+        $("#event-one").addClass("odd");
+        $("#event-two").addClass("even");
+        $("#event-four").addClass("even");
+        $("#event-three").addClass("highlighted");
+        $("#event-one").removeClass("highlighted");
+        $("#event-two").removeClass("highlighted");
+        $("#event-four").removeClass("highlighted");
+        $("#see-more").removeClass("highlighted");
+        $(".event-three").show();
+        $(".event-one").hide();
+        $(".event-two").hide();
+        $(".event-four").hide();
+      });
+      $("#event-four").click(function(){
+        $("#event-four").removeClass("even");
+        $("#event-one").addClass("odd");
+        $("#event-two").addClass("even");
+        $("#event-three").addClass("odd");
+        $("#event-four").addClass("highlighted");
+        $("#event-one").removeClass("highlighted");
+        $("#event-two").removeClass("highlighted");
+        $("#event-three").removeClass("highlighted");
+        $("#see-more").removeClass("highlighted");
+        $(".event-four").show();
+        $(".event-one").hide();
+        $(".event-two").hide();
+        $(".event-three").hide();
+      });
+      $("#see-more").click(function(){
+
+        // $("#event-one").removeClass("highlighted");
+        // $("#event-two").removeClass("highlighted");
+        // $("#event-three").removeClass("highlighted");
+        // $("#event-four").removeClass("highlighted");
+        // $(".event-four").show();
+        // $(".event-one").hide();
+        // $(".event-two").hide();
+        // $(".event-three").hide();
+      });
+    });
+    </script>
+
+  </head>
+  <body>
+    <div class='cal-and-events-container'>
+      <div class='future-dates-container'>
+        <div id='event-one' class='future-event-container odd'><div class='future-event-text-container'>14th<br>July</div></div>
+        <div id='event-two' class='future-event-container even'><div class='future-event-text-container'>16th<br>Aug</div></div>
+        <div id='event-three' class='future-event-container odd'><div class='future-event-text-container'>24th<br>Nov</div></div>
+        <div id='event-four' class='future-event-container even'><div class='future-event-text-container'>20th<br>Dec</div></div>
+        <a href='https://insulet.sharepoint.com/sites/IntranetDev/Lists/Calendar/calendar.aspx'><div id='see-more' class='see-more-container future-event-container odd'><div class='future-event-text-container'><em>See<br>More</em></div></div></a>
+
+      </div>
+      <div class='event-content'>
+        <div class='event-name-container'>
+          <div class='event-name-text-container event-one bold-text'>Company Holiday</div>
+          <div class='event-name-text-container event-two bold-text'>Company Picnic</div>
+          <div class='event-name-text-container event-three bold-text'>Benefits Enrollment</div>
+          <div class='event-name-text-container event-four bold-text'>Company Retreat</div>
+        </div>
+        <div class='event-date-container'>
+          <div class='event-date-text-container event-one'>July 14th, 2017<br>All Day</div>
+          <div class='event-date-text-container event-two'>August 16th 8:00am - <br> - August 17th 5:00pm</div>
+          <div class='event-date-text-container event-three'>November 24th<br>6:00am to 8:00pm</div>
+          <div class='event-date-text-container event-four'>December 20th<br>All Day</div>
+        </div>
+        <div class='event-description-container'>
+          <div class='event-description-text-container event-one'>"Lorem ipsum dolor sit amet, cquis nostrud exercitation ulusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 1</div>
+          <div class='event-description-text-container event-two'>d do eiusmod tempor incididolor soloolor sivt amvet,r olor soloolor sivt amvet,r unt ut labore et dolorequis nostrud exercitation ul magna aliqua.Ut enim ad minim veniam, quis no</div>
+          <div class='event-description-text-container event-three'>quis nostrud exercquis nolor soloolor sivt amvet,r olor solooloqua.Ut enim ad minim veniam, q soloolor sivt amvet,r r sivt amvet,r ostrud exercitation ulitation ul</div>
+          <div class='event-description-text-container event-four'>olor sit amet,xerolor soloolorolor soloolor sivt amvitation ulusmod tempor incididunt ut labr soloolor sivt amvet,r loolor sivt amvet,r  sivt amvet,r sit amet,it amet,citation ul</div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

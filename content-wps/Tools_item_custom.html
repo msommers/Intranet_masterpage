@@ -1,0 +1,68 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+	<head>
+		<title>Tools Item</title>
+		<!--[if gte mso 9]><xml>
+		<mso:CustomDocumentProperties>
+		<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+		<mso:MasterPageDescription msdt:dt="string">Displays a Tool Item.</mso:MasterPageDescription>
+		<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+		<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+		<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+		<mso:ManagedPropertyMapping msdt:dt="string">'Title':'Title','Path':'Path','Description':'Description','URL':'InsuletLinkOWSURLH','Icon':'InsuletIconOWSURLH'</mso:ManagedPropertyMapping>
+		<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://insulet.sharepoint.com/sites/IntranetDev/_catalogs/masterpage/Display Templates/Content Web Parts/Tools_Item.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+		</xml><![endif]-->
+	</head>
+	<script>
+		alert("Hi From Display Template");
+	</script>
+	<body>
+		<div>
+			<!--#_
+
+			var siteCollectionURL = SP.PageContextInfo.get_siteAbsoluteUrl();
+			var siteURL = _spPageContextInfo.webServerRelativeUrl;
+			var linkURL = $getItemValue(ctx, "Path");
+			linkURL.overrideValueRenderer($urlHtmlEncode);
+			var title = $getItemValue(ctx, "Title");
+			var url = $getItemValue(ctx, "URL");
+			var imgIcon = $getItemValue(ctx, "Icon");
+			var imgURL =siteURL + "/Style%20Library/Insulet/Images/file.png";
+			if(imgIcon.value){
+				imgURL =imgIcon.value[0].value;
+			}
+
+			 _#-->
+
+
+
+
+			<!-- <div class="cbs-Item" data-displaytemplate="Item2Lines">
+				<a target="_blank" class="cbs-ItemLink" title="_#= $htmlEncode(title.defaultValueRenderer(title)) =#_" >
+						<img class="cbs-Thumbnail" src="_#= $htmlEncode(imgURL) =#_" alt="_#= $htmlEncode(title.defaultValueRenderer(title)) =#_" />
+				</a>
+				<div class="cbs-Detail" >
+						<a target="_blank" class="cbs-Line1Link ms-noWrap ms-displayBlock" href="_#= url =#_" title="_#= $htmlEncode(title.defaultValueRenderer(title)) =#_" >_#= title =#_</a>
+				</div>
+						<hr class='hrseparator'>
+			</div> -->
+<!--#_
+// Check if it is the last item to process, then display URL
+var currentItemIdx = ctx.CurrentItemIdx + 1;
+var pageURL =  siteURL + "/Lists/ToolsResources/AllItems.aspx";
+//console.log(linkURL);
+if(currentItemIdx === ctx.CurrentGroup.RowCount) {
+_#-->
+<br>
+<div class="AllLink"> <a href="_#= $htmlEncode(pageURL) =#_">View All</a></div>
+<!--#_
+}
+_#-->
+
+		</div>
+
+	</body>
+</html>

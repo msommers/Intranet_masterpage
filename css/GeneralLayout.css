@@ -1,0 +1,86 @@
+﻿/* General Pagelayout 2 Column CSS Styles */
+
+/* Hide Left Side Navigation */
+#sideNavBox {display: none;}
+
+/* Remove margin on content area */
+#contentBox{margin-left: 0px;}
+
+#DeltaPlaceHolderMain,
+div.article, div.welcome,
+.article-content, .welcome-content{
+padding-top:0px;
+margin-top: 0px;}
+
+
+#contentRow{padding: 0px;}
+
+#s4-bodyContainer{padding-bottom: 0px;}
+
+
+/* Hide Page Title */
+#pageTitle{display: none;}
+
+#gpl-contentcontainer{padding-top: 30px;}
+
+/* Page Layout Styles */
+#gpl-2col-content{padding: 0px; width: 100%; display: table;}
+
+/* Summary Text */
+.gpl-2col-summarytext{
+	padding-bottom: 15px;
+}
+
+/* Left Column */
+.gpl-leftcolumn{display: table-cell; padding-left: 40px; padding-right: 10px; width: 70%; vertical-align: top;}
+.gpl-topzone{}
+.gpl-topzone .ms-webpartzone-cell {
+padding:0px;
+}
+
+
+.gpl-topmiddlezone{width: 100%; display: table;}
+.gpl-topleftzone{display: table-cell; padding-right: 10px; width: 50%;}
+.gpl-toprightzone{display: table-cell; padding-left: 10px; width: 50%;}
+
+.gpl-bottommiddlezone{width: 100%; display: table;}
+.gpl-bottomleftzone{display: table-cell; padding-right: 10px; width: 33%;}
+.gpl-bottomcenterzone{display: table-cell; padding-right: 10px; padding-left: 10px; width: 33%;}
+.gpl-bottomrightzone{display: table-cell; padding-left: 10px; width: 33%;}
+
+.gpl-bottomzone{}
+
+.gpl-bottomzone iframe{width: 100% !important; height: 600px !important;}
+
+/* Right Column */
+.gpl-rightcolumn{display: table-cell; padding-left: 10px; padding-right: 40px; width: 30%; vertical-align: top;}
+
+.gpl-rightzone{}
+
+.ms-webpartzone-cell{
+	background: rgba(255,255,255,1);
+}
+
+#gpl-2col-content .ms-WPBorder{
+	border: 0px;
+}
+
+/* Tablet Landscape (All Screens Up to 1024px) */
+@media only screen 
+and (max-width: 1024px){
+.gpl-topleftzone{width: 100%; display: table; padding-right: 0px;}
+.gpl-toprightzone{width: 100%; display: table; padding-left: 0px;}
+
+}
+
+/* Tablet Portait (All Screens Up to 768px) */
+@media only screen 
+and (max-width: 768px){
+.gpl-leftcolumn{width: auto; display: block; margin: 0px 40px; padding: 0px 0px;}
+.gpl-rightcolumn{width: auto; display: block; margin: 0px 40px; padding: 0px 0px;}
+
+}
+/* Phone Portait (All Screens Up to 480px) */
+@media only screen 
+and (max-width: 480px){
+}

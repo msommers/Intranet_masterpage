@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type='text/css'>
+      .marketing-functions-container {
+        color: #4A4A4A;
+        background: transparent;
+        /*width: 455px;*/
+        width: 100%;
+        /*border: 1px black solid;*/
+        height: auto;
+        font-size: 16px;
+      }
+      .marketing-functions-ul {
+        list-style-type: none;
+      }
+      .control-btn {
+        float:right;
+        cursor: pointer;
+      }
+
+      .page-count {
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      .view-control {
+      /*border: 1px blue solid;*/
+      height: 15%;
+      }
+
+      .info-container {
+        /*border: red 1px solid;*/
+        height: 80%;
+      }
+      .marketing-function-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: #4A4A4A;
+        letter-spacing: 1.25px;
+        font-family: "AkzidenzGroteskPro-Bold";
+      }
+      .function-container {
+        padding: 5% 5% 0% 5%;
+        min-height: 365px;
+        max-height: 365px;
+        height: 365px;
+
+      }
+      .flip {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        margin-right: 5px;
+        padding-bottom: 1.5px;
+      }
+      .marketing-function-descr {
+        line-height: 35px;
+        overflow: hidden;
+      }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type='text/javascript'>
+    "use strict";
+    $(()=> {
+      $(".is-container").hide();
+      $(".fr-container").hide();
+      $(".po-container").hide();
+      $(".dm-next-btn").click(function(){
+        $(".dm-container").hide();
+        $(".is-container").show();
+      });
+      $(".dm-prev-btn").click(function(){
+        $(".dm-container").hide();
+        $(".po-container").show();
+      });
+      $(".is-next-btn").click(function(){
+        $(".is-container").hide();
+        $(".fr-container").show();
+      });
+      $(".is-prev-btn").click(function(){
+        $(".is-container").hide();
+        $(".dm-container").show();
+      });
+      $(".fr-next-btn").click(function(){
+        $(".fr-container").hide();
+        $(".po-container").show();
+      });
+      $(".fr-prev-btn").click(function(){
+        $(".fr-container").hide();
+        $(".is-container").show();
+      });
+      $(".po-next-btn").click(function(){
+        $(".po-container").hide();
+        $(".dm-container").show();
+      });
+      $(".po-prev-btn").click(function(){
+        $(".po-container").hide();
+        $(".fr-container").show();
+      });
+
+    });
+$(document).ready(function() {
+  function applyJquery() {
+    // ----- Markting functions WP#: 5
+    $("#MSOZoneCell_WebPartWPQ5").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ5").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ5 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+
+    //------- FAQ
+    $("#WebPartTitleWPQ2").css("background-color", "rgba(41,56,150,0.63)").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr").css("padding-left", "15px");
+    // Co
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(1) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(2) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(3) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(4) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
+    // Ensure the first answer is displayed on load
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(1) > li.a").css("display", "list-item");
+    // Ensure the first answer icon is rotated on load
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(1) > li.q > img").addClass("rotate");
+
+    // Controls the height of individual q/a boxes
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(2) > li.q").css("padding", "5px 0px 10px 0px");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(3) > li.q").css("padding", "5px 0px 10px 0px");  $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(4) > li.q").css("padding", "5px 0px 10px 0px");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul").css("padding-bottom", "7px");
+
+
+
+
+    // ---- OUR Team
+    $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ4").css("background-color", "#F89C05").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#OurTeam").css("padding", "32px 15px 30px 15px");
+
+    // $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("margin-left", "360px");
+    $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("display", "none");
+    $("#OurTeam > div > div.contact-item > div.contact-item > hr").after("<div class='mkt-team-view-all'><a href='https://insulet.sharepoint.com/sites/IntranetDev/Marketing/Pages/members.aspx'>View All</a></div>");
+    $(".mkt-team-view-all").css("text-align", "right").css("padding-right", "15px").css("float","right").css("margin-bottom","31px");
+
+// Logo
+  $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
+  $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
+
+    // ------ Banner
+    $("#MSOZoneCell_WebPartWPQ7").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
+
+    // ----- Quick Tools
+    $("#MSOZoneCell_WebPartWPQ3").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ3").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
+
+    // - Cal & event-dates
+    $("#MSOZoneCell_WebPartWPQ6").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ6 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ6").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    // $("#WebPartWPQ7_ChromeTitle").css("margin-bottom", "-2px");
+  }
+    setTimeout(applyJquery, 1000);
+
+  });
+    </script>
+  </head>
+  <body>
+    <div class='marketing-functions-container'>
+
+        <div class='dm-container function-container'>
+          <div class='info-container'>
+            <div class='marketing-function-title'><strong>Data Management Solutions, T2D and Higher Insulin Requiring Innovation, Analytics</strong></div><br>
+            <div class='marketing-function-descr'>
+            The data management solutions are the reporting, viewing and uploading capabilities for a diabetes device in-clinic or outside of clinic for an Omnipod user or HCP. T2D innovation consists of creating pump solutions for higher insulin requiring patients including patients with T2D and higher insulin requiring T1D patients. The current programs are U500 and U200.
+            </div>
+          </div>
+          <div class='view-control'>
+            <div class='dm-page-count page-count'>1 of 4</div>
+            <div class='dm-next-btn control-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            <div class='dm-prev-btn control-btn'><img class='flip' src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+          </div>
+        </div>
+
+        <div class='is-container function-container'>
+          <div class='info-container'>
+            <div class='marketing-function-title'><strong>Innovation &amp; Product Lifecycle Improvements</strong></div><br>
+            <div class='marketing-function-descr'>
+            Focused on the strategy and analytics behind fulfilling customers’ needs. Developing customer requirements and collaborating with cross functional teams throughout new product development ensuring that the customer needs are being met.  Finally, this team prepares for commercial launch requirements including promotion, packaging, pricing, training and internal supportability for a successful commercial launch.
+            </div>
+          </div>
+            <div class='view-control'>
+              <div class='is-page-count page-count'>2 of 4</div>
+              <div class='is-next-btn control-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+              <div class='is-prev-btn control-btn'><img class='flip'  src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            </div>
+          </div>
+
+
+        <div class='fr-container function-container'>
+            <div class='info-container'>
+              <div class='marketing-function-title'><strong>Downstream Marketing Team</strong></div><br>
+              <div class='marketing-function-descr'>
+                Downstream Marketing Team is dedicated to providing personal and thought leadership to the HCP segment.  We are focused on understanding market dynamics and turning them into strategic initiatives that drive Insulet business objectives.  We will be focused, efficient, and relevant to our customers and partners.
+              </div>
+            </div>
+          <div class='view-control'>
+            <div class='fr-page-count page-count'>3 of 4</div>
+            <div class='fr-next-btn control-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            <div class='fr-prev-btn control-btn'><img class='flip'  src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+          </div>
+        </div>
+
+        <div class='po-container function-container'>
+          <div class='info-container'>
+              <div class='marketing-function-title'><strong>Patient Outreach &amp; Digital Marketing</strong></div><br>
+              <div class='marketing-function-descr'>
+                Direct-to-Patient Marketing is responsible for the strategic development and execution of marketing campaigns focused on Podder acquisition and retention. The DTP team drives conversions through a combination of marketing channels with a specific focus on paid and earned lead generation, marketing automation, content marketing, search engine marketing, email, social media and data analytics.
+               </div>
+          </div>
+          <div class='view-control'>
+            <div class='po-page-count page-count'>4 of 4</div>
+            <div class='po-next-btn control-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            <div class='po-prev-btn control-btn'><img class='flip'  src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+          </div>
+        </div>
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1578 @@
+﻿/*Parent nav*/
+/*hide home link in top navigation*/
+.ms-core-listMenu-horizontalBox li.static > a{
+display: none !important;
+}
+.ms-core-listMenu-horizontalBox li.static > ul a{
+display: block !important;
+}
+/*hide home link in top navigation (end)*/
+
+.ms-breadcrumb-top {
+font-size:14pt;
+text-transform:uppercase;
+padding-top:15px;
+padding-left:20px;
+white-space: normal;
+}
+
+/*Parent nav font*/
+#DeltaTopNavigation .ms-core-listMenu-item {
+color:#ffffff;
+}
+
+/*Insulet Fonts */
+@font-face {
+	font-family: 'AkzidenzGroteskPro';
+	src: url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Fonts/akzidenzgroteskpro-regular-webfont.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AkzidenzGroteskPro-MD';
+	src: url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Fonts/akzidenzgroteskpro-md-webfont.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AkzidenzGroteskPro-Bold';
+	src: url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Fonts/akzidenzgroteskpro-bold-webfont.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'ThirstyScriptRegular';
+	src: url('https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Fonts/thirstyscriptregular-webfont.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+.ms-core-navigation {
+	font-family:'AkzidenzGroteskPro';
+}
+
+.ms-core-listMenu-verticalBox > .ms-core-listMenu-item, .ms-core-listMenu-verticalBox li.static > .ms-core-listMenu-item {
+	font-family:'AkzidenzGroteskPro';
+}
+
+/*Hide O365 Labels in Ribbon*/
+#suiteBarTop .o365cs-nav-o365Branding{display: none;}
+
+/*child navigtion*/
+#DeltaTopNavigation ul.dynamic {
+font-size:16px;
+background-color:#fff;
+text-transform: none;
+color:#0b1f8f;
+}
+
+#DeltaTopNavigation ul.dynamic a {
+padding-top:3px;
+padding-bottom:3px;
+padding-left:5px;
+color:#0b1f8f;
+}
+
+#DeltaTopNavigation ul.dynamic li :hover {
+color:#fa2722;
+}
+
+
+
+/*Top Navigation row*/
+#s4-titlerow{
+background-color:#BFDCF4;
+height:70px;
+}
+
+/*Action bar formatting*/
+.ms-cui-topBar2 {
+border-bottom:none;
+max-width:1400px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/*Remove grey background behind Action bar*/
+#globalNavBox,.ms-clientcontrol-chromeheader {
+background-color: rbga(230, 231, 232, 0.61);
+border-bottom:0px solid #e6e7e8;
+}
+
+/*page background*/
+.ms-core-overlay {
+background-color:#f5f5f5;
+}
+
+
+/*remove default content margins*/
+#contentBox {
+margin-right:0px;
+/*margin-left:0px;*/
+}
+
+.ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited {
+	color:#414141;
+}
+
+/*side nav hover
+.ms-core-listMenu-selected:link, .ms-core-listMenu-selected:visited, .ms-core-listMenu-selected {
+	background:rgba(237, 139, 0, 0.2);
+}*/
+
+/*web part container style*/
+.ms-webpartzone-cell {
+background-color:#ffffff;
+box-shadow:0 2px 4px 0 rgba(149, 149, 149, 0.4);
+padding:25px;
+}
+
+/*web part container style*/
+.tableCol-75 .ms-fullWidth .cell-margin{
+	padding-right: 20px;
+	vertical-align: top;
+}
+.tableCol-75 .ms-fullWidth .cell-margin:last-child{
+	padding-right: 0px;
+}
+
+
+/*Main nav format*/
+#titleAreaBox {
+max-width:1400px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/*search box layout*/
+.ms-mpSearchBox {
+margin-top:4px;
+}
+.ms-mpSearchBox input{
+color: #ffffff;
+}
+
+.ms-srch-sb-border {
+border:1px solid #e6e5e5;
+}
+
+.ms-srch-sb-border:hover {
+border:1px solid #e6e5e5;
+}
+
+.ms-srch-sb-borderFocused {
+border:1px solid #e6e5e5;
+}
+
+.ms-searchCenter-result-main {
+	margin-left:90px;
+}
+
+.ms-searchCenter-result-main .ms-webpartzone-cell {
+	margin-bottom:1px;
+}
+
+#searchInputBox, input.ms-helperText {
+	background-color:#fff;
+	color:#808285;
+	border: solid 0px #e6e5e5;
+}
+
+/*search dropdown*/
+.ms-qSuggest-listItem {
+	color:#959595;
+}
+
+/*
+.ms-qSuggest-hListItem {
+	color:#0b1f8f;
+	background:rgba(237, 139, 0, 0.2);
+}*/
+
+/*search results & large search box*/
+.ms-srch-sbLarge {
+	background-color:#ffffff;
+	border:1px solid #959595 !important;
+}
+
+.ms-srch-sbLarge>input {
+	background-color:#ffffff;
+	color:#414141;
+}
+
+.ms-searchCenter-result-main {
+	color:#959595;
+}
+
+/*Logo*/
+.ms-siteicon-img{
+padding-top:12px;
+}
+
+
+/*hide the page title information icon*/
+#ms-pageDescriptionImage{
+display:none;
+}
+
+/*Remove title formatting*/
+.ms-webpart-chrome-title {
+	margin-bottom:-2px;
+}
+
+ul.cbs-List {
+	margin:0px;
+	width: 100%;
+}
+
+ul.cbs-List .cbs-Item{
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+
+ul.cbs-List .cbs-Detail{
+	padding-bottom: 5px;
+}
+ul.cbs-List .cbs-Detail a{
+	font-size: 16px;
+	color: #606060;
+}
+standard- .cbs-Detail a:hover{
+	color: #fe402c;
+}
+
+
+standard- .cbs-Thumbnail{
+	height: auto;
+	width: 20px;
+	padding-bottom: 7px;
+}
+
+
+standard- span.cbs-ItemLink{
+	font-size: 24px;
+	color: #1a96b5;
+	margin-top: -7px;
+	padding-bottom: 7px;
+}
+
+
+standard- .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+
+
+/*Web Part Titles*/
+.ms-webpart-titleText {
+color:#0b1f8f;
+font-size:20px;
+font-family: 'AkzidenzGroteskPro-MD';
+padding-bottom:10px;
+}
+
+.ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
+	color:#0b1f8f;
+	font-size:20px;
+	font-family: 'AkzidenzGroteskPro-MD';
+}
+
+/*News & Announcements Formatting*/
+.cbs-picture3LinesContainer, .cbs-Detail {
+	max-width:450px;
+	padding-top:0px;
+}
+
+.cbs-picture3LinesImageContainer {
+	width:140px;
+	height:140px;
+	margin-bottom:30px
+}
+
+.cbs-picture3LinesImageContainer img {
+	width:110px;
+	height:75px;
+}
+
+
+.newsParentTitleContainer {
+	max-width:340px;
+	margin-left:0px;
+	vertical-align:top
+}
+
+.newsAllDataContainer, .newsAllTitleContainer {
+	max-width:710px;
+	margin-left:0px;
+}
+
+.newsDeptTitleContainer {
+    margin-left: 0px;
+}
+
+.newsParentImageContainer {
+	width:140px;
+	height:140px;
+	margin-bottom:25px
+	}
+
+.newsParentImageContainer img {
+	width:140px;
+	height:140px;
+}
+
+.newsParentDataContainer {
+	vertical-align:top;
+	margin-left:120px;
+	max-width:350px;
+}
+
+.newsAllDataContainer {
+	margin-left:160px;
+	max-width:550px;
+}
+
+
+.newsParentDataContainer .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+
+.AllLink a:link {
+float:right;
+	color:#0b1f8f;
+	font-size:14px;
+	margin-left:10px;
+}
+
+.AllLink a:visited {
+float:right;
+	color:#0b1f8f;
+}
+
+/*Quick Links*/
+.cbs-ItemLink {
+	padding-right:15px;
+}
+
+/*Calendar*/
+.ms-vh, .ms-vh2 {
+	color:#414141;
+	font-size:14px;
+	text-transform:uppercase;
+}
+
+.ms-vb2 {
+	  /*font-family: 'AkzidenzGroteskPro';*/
+
+	/*color: rgb(0, 63, 112);*/
+	color:#959595;
+	font-size:14px;
+}
+
+.ms-vb2 a.ms-listlink {
+	color:#959595;
+}
+
+.ms-vb2 a.ms-listlink:hover {
+	color:#0b1f8f;
+}
+
+.contact-profile-image img {
+	border-radius: 100px; !important;
+}
+
+/*FAQ*/
+ul.faq {
+	margin:0px;
+}
+ul.faq .item{
+	padding: 7px 0px 10px 0px;
+	color:#060606;
+	font-size:16px;
+	border-bottom: 1px #d5d5da solid;
+}
+ul.faq li{
+	padding: 0px;
+}
+
+ul.faq li.q img {
+    padding-right: 15px;
+    vertical-align: middle;
+}
+ul.faq .item li.q{
+	padding: 10px 0px 10px 0px;
+}
+
+ul.faq .item li.a{
+	color:#575d6c;
+	white-space: pre-line;
+	font-size:16px;
+	padding: 0px 0px 5px 0px;
+}
+
+
+
+
+/*Remove Edit Links link from top Navigation*/
+#DeltaTopNavigation .ms-core-listMenu-root .ms-listMenu-editLink {
+display: none;
+}
+
+/*Remove Edit link from left navigation*/
+.ms-core-listMenu-verticalBox .ms-listMenu-editLink {
+display: none;
+}
+
+/*side nav hover*/
+li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover,
+li > a.ms-core-listMenu-item:active{
+/*background:rgba(237, 139, 0, 0.2);*/
+background-color:transparent;
+}
+
+li > a.ms-core-listMenu-item:hover{
+background-color:transparent;
+}
+
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-item :hover{
+	color: #fe402c !important;
+}
+.ms-core-listMenu-horizontalBox .dynamic:hover{
+	color: #fe402c !important;
+}
+
+.menu-item-text {
+color: #292828;
+}
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-item .menu-item-text{font-size: 16px;}
+
+/* Navigation Hover */
+.menu-item-text:hover {
+/*color: #0b1f8f;*/
+}
+
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected .menu-item-text{
+	font-weight: bold;
+	color: #fe402c;
+}
+
+/*calendar hover*/
+.ms-itmHoverEnabled:hover > *{
+	background-color:transparent;
+}
+
+/*document hover*/
+.ms-itmHoverEnabled:hover .ms-list-itemLink-td{
+	background-color:transparent;
+}
+
+/*Links and visted links*/
+a:link{
+	color:inherit;
+}
+
+a:visited {
+	color:inherit;
+}
+
+/*Link hover*/
+a:hover{
+	color:#fe402c;
+	text-decoration: none;
+}
+
+/*Title hover*/
+h2:hover{
+	color:inherit;
+}
+
+
+body {
+	color:#959595;
+	font-family: 'AkzidenzGroteskPro';
+	font-size:13px;
+}
+
+h1, h2, h3, h4, h5 {
+	color:#414141;
+	font-family:'AkzidenzGroteskPro';
+}
+
+h1 {
+	font-size:24px;
+	text-transform:uppercase;
+}
+/*
+.ms-WPBody{
+background-color: #ffffff;
+}*/
+
+
+
+/*Office 365 second row background*/
+.ms-cui-topBar2{
+	background-color: rbga(230, 231, 232, 0.61);
+}
+
+
+
+/*alert me, settings and help icons*/
+#O365_NavHeader, #O365_MainLink_NavMenu, .o365cs-base.o365cst .o365cs-topnavText{
+	color:white !important;
+	background-color:#0b1f8f;
+}
+
+/*hover over top bar icons*/
+.ms-promotedActionButton:hover .ms-promotedActionButton-text {
+    color:#454a59;
+}
+
+/*Top bar icons*/
+.ms-promotedActionButton-text {
+    color:#454a59;
+}
+
+
+/*page and publish link*/
+.ms-cui-tt-a > .ms-cui-tt-span{
+	color:#454a59 !important;
+}
+
+
+/*browse link*/
+.ms-browseTab.ms-cui-tt-s > .ms-cui-tt-a > .ms-cui-tt-span{
+	color:#454a59 !important;
+}
+
+/*Action bar formatting*/
+.ms-cui-topBar2 {
+border-bottom:none;
+max-width:1400px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/*Remove grey background behind Action bar*/
+#globalNavBox,.ms-clientcontrol-chromeheader {
+background-color: rbga(230, 231, 232, 0.61);
+border-bottom:0px solid #e6e7e8;
+}
+
+/*page background*/
+.ms-core-overlay {
+background-color:#f5f5f5;
+}
+
+#s4-bodyContainer {
+max-width:1400px !important;
+margin-left:auto;
+margin-right:auto;
+}
+
+/*contain main content width*/
+#contentRow {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*remove default content margins*/
+#contentBox {
+margin-right:0px;
+/*margin-left:0px;*/
+min-width: 0px;
+}
+
+/*Side Nav style*/
+#sideNavBox {
+	background-color:#ffffff;
+	box-shadow:0 2px 4px 0 rgba(149, 149, 149, 0.4);
+	padding:20px 10px 10px 10px;
+	margin: 0px 0px 0px 0px;
+	display: block;
+}
+
+
+.ms-core-listMenu-item, .ms-core-listMenu-item:link, .ms-core-listMenu-item:visited, .ms-tv-item:link, .ms-tv-item:visited, .ms-tv-header:link, .ms-tv-header:visited {
+	color:#414141;
+}
+
+/*side nav hover
+.ms-core-listMenu-selected:link, .ms-core-listMenu-selected:visited, .ms-core-listMenu-selected {
+	background:rgba(237, 139, 0, 0.2);
+}*/
+
+/*web part container style*/
+.ms-webpartzone-cell {
+background-color:#ffffff;
+box-shadow:0 2px 4px 0 rgba(149, 149, 149, 0.4);
+padding: 25px;
+}
+
+/*web part container style*/
+.tableCol-75 .ms-fullWidth .cell-margin{
+	padding-right: 20px;
+	vertical-align: top;
+}
+.tableCol-75 .ms-fullWidth .cell-margin:last-child{
+	padding-right: 0px;
+}
+
+
+/*Main nav format*/
+#titleAreaBox {
+max-width:1400px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/*search box layout*/
+.ms-mpSearchBox {
+margin-top:4px;
+width: 300px;
+}
+.ms-mpSearchBox input{
+color: #808285;
+}
+
+.ms-mpSearchBox .ms-srch-sb{
+padding: 10px;
+}
+
+.ms-srch-sb-border {
+border:1px solid #e6e5e5;
+}
+
+.ms-srch-sb-border:hover {
+border:1px solid #e6e5e5;
+}
+
+.ms-srch-sb-borderFocused {
+border:1px solid #e6e5e5;
+}
+
+.ms-searchCenter-result-main {
+	margin-left:90px;
+}
+
+.ms-searchCenter-result-main .ms-webpartzone-cell {
+	margin-bottom:1px;
+}
+
+#DeltaPlaceHolderSearchArea {
+    margin-right: 30px;
+}
+
+#searchInputBox {
+    margin-bottom: 0px;
+}
+
+#searchInputBox, input.ms-helperText {
+	background-color:#FFF;
+	color:#808285;
+	font-size: 16px;
+}
+
+/*search dropdown*/
+.ms-qSuggest-listItem {
+	color:#959595;
+}
+
+/*
+.ms-qSuggest-hListItem {
+	color:#0b1f8f;
+	background:rgba(237, 139, 0, 0.2);
+}*/
+
+/*search results & large search box*/
+.ms-srch-sbLarge {
+	background-color:#ffffff;
+	border:1px solid #959595 !important;
+}
+
+.ms-srch-sbLarge>input {
+	background-color:#ffffff;
+	color:#414141;
+}
+
+.ms-searchCenter-result-main {
+	color:#959595;
+}
+
+/*search icon*/
+.ms-srch-sb > .ms-srch-sb-searchLink {
+    margin-left: 3px;
+    height: 23px;
+    width: 23px;
+    background: url('../Images/Icons/search-icon.png') top left no-repeat;
+}
+.ms-srch-sb-searchImg {
+    visibility: hidden;
+    height: 23px;
+    width: 23px;
+
+}
+
+/*Logo*/
+#siteIcon {
+    min-width: 245px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    margin-right: 60px;
+}
+
+.ms-siteicon-img{
+padding-top:12px;
+max-width: 245px;
+max-height: 46px;
+}
+
+
+/*Page Title**/
+.ms-core-pageTitle {
+font-size:18px;
+font-weight: bold;
+font-family:'AkzidenzGroteskPro';
+padding-top:2px;
+padding-bottom:0px;
+padding-left: 20px;
+
+}
+
+
+/*hide the page title information icon*/
+#ms-pageDescriptionImage{
+display:none;
+}
+
+/*Remove title formatting*/
+.ms-webpart-chrome-title {
+	margin-bottom:-2px;
+}
+
+/*Web Part Titles*/
+.ms-webpart-titleText {
+color:#0b1f8f;
+font-size:20px;
+font-family: 'AkzidenzGroteskPro-MD';
+padding-bottom:10px;
+text-transform: uppercase;
+}
+
+.ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
+	color:#0b1f8f;
+	font-size:20px;
+	font-family: 'AkzidenzGroteskPro-MD';
+}
+
+/*News & Announcements Formatting*/
+.cbs-picture3LinesContainer, .cbs-Detail {
+	max-width:450px;
+	padding-top:0px;
+}
+
+.cbs-picture3LinesImageContainer {
+	width:100px;
+	height:68px;
+	margin-bottom:10px
+}
+
+.cbs-picture3LinesImageContainer img {
+	width:100px;
+	height:68px;
+}
+
+
+.newsParentTitleContainer {
+	max-width:550px;
+	margin-left:0px;
+	vertical-align:top
+}
+
+.newsAllDataContainer, .newsAllTitleContainer {
+	max-width:710px;
+	margin-left:0px;
+}
+
+.newsDeptTitleContainer {
+    margin-left: 0px;
+}
+
+.newsParentImageContainer {
+	width:140px;
+	height:140px;
+	margin-bottom:25px
+	}
+
+.newsParentImageContainer img {
+	width:140px;
+	height:140px;
+}
+
+.newsParentDataContainer {
+	vertical-align:top;
+	margin-left:120px;
+	max-width:350px;
+}
+
+.newsAllDataContainer {
+	margin-left:160px;
+	max-width:550px;
+}
+
+
+.newsParentDataContainer .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+
+.AllLink a:link {
+	float:right;
+
+	color:#0b1f8f;
+	font-size:14px;
+	margin-right:10px;
+}
+
+.AllLink a:visited {
+	float:right;
+	margin-right:10px;
+	color:#0b1f8f;
+}
+
+/*Quick Links*/
+.cbs-ItemLink {
+	padding-right:15px;
+}
+
+/*Calendar*/
+.ms-vh, .ms-vh2 {
+	color:#414141;
+	font-size:14px;
+	text-transform:uppercase;
+}
+
+.ms-vb2 {
+	color:#959595;
+  /*font-family: 'AkzidenzGroteskPro';*/
+	font-size:14px;
+	/*color: rgb(0, 63, 112);*/
+
+}
+
+.ms-vb2 a.ms-listlink {
+	color:#959595;
+}
+
+.ms-vb2 a.ms-listlink:hover {
+	color:#0b1f8f;
+}
+
+.contact-profile-image img {
+	border-radius: 100px; !important;
+}
+
+
+/*FAQ*/
+ul.faq {
+	margin-top:0px;
+}
+
+
+/*Padding on top of content area*/
+#DeltaPlaceHolderMain,
+div.article, div.welcome,
+.article-content, .welcome-content{
+padding-top:0px;
+margin-top: 40px;}
+
+/*Remove Edit Links link from top Navigation*/
+#DeltaTopNavigation .ms-core-listMenu-root .ms-listMenu-editLink {
+display: none;
+}
+
+/*Remove Edit link from left navigation*/
+.ms-core-listMenu-verticalBox .ms-listMenu-editLink {
+display: none;
+}
+
+/*side nav hover*/
+li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover,
+li > a.ms-core-listMenu-item:active{
+/*background:rgba(237, 139, 0, 0.2);*/
+background-color:transparent;
+}
+
+li > a.ms-core-listMenu-item:hover{
+background-color:transparent;
+}
+
+/* Navigation Hover */
+.menu-item-text:hover {
+/*color: #0b1f8f;*/
+}
+
+/*calendar hover*/
+.ms-itmHoverEnabled:hover > *{
+	background-color:transparent;
+}
+
+/*document hover*/
+.ms-itmHoverEnabled:hover .ms-list-itemLink-td{
+	background-color:transparent;
+}
+
+/*Links and visted links*/
+a:link{
+	color:inherit;
+}
+
+a:visited {
+	color:inherit;
+}
+
+/*Link hover*/
+a:hover{
+	color:#fe402c;
+	text-decoration: none;
+}
+
+/*Title hover*/
+h2:hover{
+	color:inherit;
+}
+
+
+body {
+	color:#959595;
+	font-family: 'AkzidenzGroteskPro';
+	font-size:13px;
+}
+
+h1, h2, h3, h4, h5 {
+	color:#414141;
+	font-family:'AkzidenzGroteskPro';
+}
+
+h1 {
+	font-size:24px;
+	text-transform:uppercase;
+}
+/*
+.ms-WPBody{
+background-color: #ffffff;
+}*/
+
+
+
+/*Office 365 second row background*/
+.ms-cui-topBar2{
+	background-color: rbga(230, 231, 232, 0.61);
+}
+
+
+
+/*alert me, settings and help icons*/
+#O365_NavHeader, #O365_MainLink_NavMenu, .o365cs-base.o365cst .o365cs-topnavText{
+	color:white !important;
+	background-color:#0b1f8f;
+}
+
+/*hover over top bar icons*/
+.ms-promotedActionButton:hover .ms-promotedActionButton-text {
+    color:#454a59;
+}
+
+/*Top bar icons*/
+.ms-promotedActionButton-text {
+    color:#454a59;
+}
+
+
+/*page and publish link*/
+.ms-cui-tt-a > .ms-cui-tt-span{
+	color:#454a59 !important;
+}
+
+
+/*browse link*/
+.ms-browseTab.ms-cui-tt-s > .ms-cui-tt-a > .ms-cui-tt-span{
+	color:#454a59 !important;
+}
+
+
+
+/**************************Insulet Alerts Home Page Webpart**************************/
+.alertTitle{
+color:#414141;
+font-size:24px;
+font-family:"AkzidenzGroteskPro";
+text-transform:uppercase;
+}
+
+.alertDescription{
+color:#959595;
+font-family:"AkzidenzGroteskPro";
+font-size:14px;
+}
+
+.alertIcon{
+	width:26px;
+	height:24px;
+	overflow:hidden;
+	padding-right:10px;
+}
+
+/**************************Insulet FAQ on Department Subsites**************************/
+
+/*Responsive CSS*/
+
+
+
+ul.faq, li.a li.q { list-style: none;}
+
+ul.faq{padding: 0px 0px 10px 0px;}
+
+
+.faq li { padding: 10px 0px 10px 0px; }
+
+.faq li.q {
+	color:#003F70;
+  	font-weight: bold;
+  	font-size: 16px;
+  	cursor: pointer;
+}
+.faq li.q img {
+    padding-right: 10px;
+}
+.faq li.a {
+  /*background: #3BB0D6;*/
+  display: none;
+  color:#959595;
+}
+img.q {
+	padding-right:5px;
+}
+
+.rotate {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: relative;
+  top: 3px;
+  left: -4px;
+}
+@media (max-width:800px) {
+
+#container { width: 90%; }
+}
+
+/**************************Insulet Key Contacts**************************/
+.contact-profile-details{
+	list-style:none;
+	padding-left:0px;
+	margin: 5px;
+	margin-bottom: 15px;
+	display: table-cell;
+}
+.contact-profile-details-fixed{
+	width:165px;
+}
+.contact-name{
+	color:#0b1f8f;
+	font-size:18px;
+}
+
+.contact-name a:link{
+	color:#0b1f8f;
+}
+.contact-name a:hover{
+	color:#fe402c;
+}
+
+
+.contact-description{
+	font-size:14px;
+}
+.contact-view .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+.contact-profile-image{
+	display:table-cell;
+	vertical-align: top;
+	padding-bottom: 40px;
+	padding-right: 10px;
+	padding-top:5px;
+	width: 50px;
+	height:50px;
+	overflow:hidden;
+	text-align:center
+}
+.contact-profile-image img{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+}
+.backgroundImage img{
+	z-index:-2;
+}
+
+.profile-Overlay{
+	position: absolute;
+    margin: 4% auto auto 75%;
+	z-index: 0;
+	width: 250px
+}
+
+.boston-viewall-link {
+	text-align:right;
+	font-size: 14px;
+	color: #0c87c8;
+	font-style: italic
+}
+
+.contact-profile-expertise{
+	font-size:14px;
+}
+
+
+/**************************Insulet News Item Display Template**************************/
+.parentnews-header{
+/*  width: 364px;
+  height: 18px;*/
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 18px;
+  line-height: 20px;
+  color: #0b1f8f !important;
+  max-width:350px;
+  white-space: normal;
+}
+
+.parentnews-date{
+/*  width: 463px;
+  height: 14px;*/
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 13px;
+  line-height: 1.0;
+  color: #808080;
+  padding-top:8px;
+}
+
+.parentnews-detail{
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 13px;
+  color: #808080;
+  padding-top:10px;
+}
+
+.deptnews-header{
+/*  width: 364px;
+  height: 18px;*/
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 18px;
+  line-height: 1.0;
+  color: #414141 !important;
+  text-transform:uppercase;
+  max-width:500px;
+}
+.hrseparatorParentNews{
+	display: none;
+}
+
+.deptnews-date{
+/*  width: 463px;
+  height: 14px;*/
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 14px;
+  line-height: 1.0;
+  color: #959595;
+  padding-top:8px;
+}
+
+.deptnews-detail{
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 16px;
+  color: #959595;
+  padding-top:10px;
+}
+
+.allnews-header{
+/*  width: 364px;
+  height: 18px;*/
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 18px;
+  line-height: 1.0;
+  color: #414141 !important;
+  text-transform:uppercase;
+  max-width:500px;
+}
+
+.allnews-date{
+/*  width: 463px;
+  height: 14px;*/
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 14px;
+  line-height: 1.0;
+  color: #959595;
+  text-transform:uppercase;
+  padding-top:8px;
+}
+
+.allnews-detail{
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 16px;
+  color: #959595;
+  padding-top:10px;
+}
+
+
+/**************************Insulet Quick Links**************************/
+/*used for REST solution*/
+.linkText{
+	font-size:12pt;
+	color:gray;
+	display:table-row-group;
+}
+
+.linkText img{
+	width: 20px;
+}
+
+/*used for item display template*/
+.spacing {
+padding-bottom:2%;
+
+}
+
+.icon{
+	width:18px;
+	height:16px;
+}
+
+/*text overflow fix*/
+
+/* Changed from visible to hidden*/
+ul.cbs-List a {
+	overflow:hidden !important;
+}
+
+.articleImageLayout{
+padding-left:200px;
+}
+
+/**************************Insulet NewsLeft Article Page Layout CSS**************************/
+.ArticlePageTitle{
+	font-size: 38px;
+    line-height: 1.0;
+    color: #414141;
+}
+
+.ArticlePageAuthor{
+	padding-top:20px;
+	font-size: 20px;
+    line-height: 1.0;
+    color: #414141;
+}
+
+.ArticlePageDate{
+	font-size: 20px;
+    line-height: 1.0;
+    color: #414141;
+}
+.floatLeft {
+    float: left;
+	padding-top:30px;
+	margin-right:40px;
+	padding-bottom:30px;
+}
+
+.ArticleContent {
+	padding-top:30px;
+}
+
+.ArticleContent ul{
+	overflow:hidden
+}
+
+/**************************Horizontal Ruler Separator**************************/
+.hrseparator{
+	border: 0;
+	height: 1px;
+	/*background: #eee;*/
+	background: #959595;
+	width: 100%;
+	margin-top: 15px;
+}
+
+/**************************Department Pages - Title and Description Web Part**************************/
+/*Department Header*/
+.department-details {
+	font-family:'AkzidenzGroteskPro';
+	font-size:16px;
+	line-height:1.5;
+}
+ul.department-details {
+	margin: 0px;
+	display: block;
+}
+ul.department-details li{
+	position: relative;
+}
+
+ul.department-details .siteImage{
+}
+
+ul.department-details .siteImage img{
+	width: 100% !important;
+	height: auto !important;
+}
+
+ul.department-details .siteTitle{
+  height:33px;
+  font-size: 24px;
+  font-family: 'AkzidenzGroteskPro';
+  color:#FFF !important;
+  text-transform:uppercase;
+  background-color: rgba(13, 29, 110, 0.6);
+  padding-top:17px;
+  padding-bottom:17px;
+  padding-left:30px;
+  position: relative;
+  bottom: 73px;
+  margin-bottom: -73px;
+}
+
+ul.department-details .siteDescription{
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 20px;
+  line-height: 1.6;
+  color: #959595;
+  padding: 20px 80px 30px 80px;
+	text-align: justify;
+}
+/**********************************************Calendar********************************/
+.upcoming-events h4 {
+  font-family: 'Century Gothic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+.upcoming-events-contents {
+  width: 100%;
+  min-height: 20px;
+}
+.upcoming-events-content {
+  display: inline-block;
+  margin-bottom: 21px;
+  padding-right: 25px;
+}
+.cal-date {
+  float: left;
+  text-align: center;
+  background: #F2F2F2;
+  width: 54px;
+}
+.cal-date span {
+  display: block;
+}
+.cal-date .cal-day{
+  font-size: 30px;
+  color: #1a96b5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: -7px;
+}
+.cal-date .cal-month{
+  font-size: 10px;
+  color: #575d6c;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.event-details {
+  margin-top: -3px;
+  margin-left: 65px;
+}
+.event-details .event-title {
+  padding-top: 5px;
+}
+
+.event-details .event-title a {
+  color: #0b1f8f !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+.event-details .event-title a:hover {
+  color: #fe402c !important;
+}
+
+.event-details .event-description {
+  font-size: 15px;
+  color: #454a59;
+  line-height: 15px;
+  padding-top: 1px;
+}
+
+.upcoming-events-contents .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+
+/*** Search Refiners ***/
+
+/* Hide Search On Yammer */
+#sideNavBox .ms-ref-ctrl{
+	display: none;
+}
+
+/* Refinement Panel */
+#sideNavBox #Refinement{
+	display: block;
+	padding-left: 10px;
+}
+
+/*** Search Results ***/
+#DeltaPlaceHolderMain .ms-srch-siteSearchResults{
+	background-color:#ffffff;
+	box-shadow:0 2px 4px 0 rgba(149, 149, 149, 0.4);
+	padding:25px;
+	margin: 0px 0px 40px 0px;
+}
+
+/*** Footer ***/
+
+#gpl-footer{
+	width: 100%;
+	padding: 20px 0px 30px 0px;
+	background-color: #0b1f8f;
+	font-size: 13px;
+	color: #FFF;
+	display: block;
+    clear: both;
+}
+.gpl-footertext{display: inline-block; width: auto;}
+.gpl-copyright{
+	font-size: 13px;
+	margin-left: 50px;
+	margin-top: 15px;
+}
+.gpl-footerinfo{display: inline-block; float: right; text-align: right; margin-right: 50px; padding: 10px 0px 0px 0px; white-space: nowrap;}
+#gpl-footerfeedback{font-size: 15px; display: inline-block; vertical-align: top; padding-top: 5px;}
+#gpl-footerfeedback a:hover{color: #EEE !important;}
+#gpl-footersocial{display: inline-block; vertical-align: top;}
+
+.gpl-facebook, .gpl-twitter, .gpl-linkedin{display: inline-block;}
+.gpl-facebook a{display: block; height: 24px; width: 24px; padding: 0px 0px 0px 20px; background: url('../Images/facebook-logo.png') center right no-repeat;}
+.gpl-twitter a{display: block; height: 24px; width: 24px; padding: 0px 20px 0px 20px; background: url('../Images/linked-in-logo.png') center center no-repeat;}
+.gpl-linkedin a{display: block; height: 24px; width: 24px; padding: 0px; background: url('../Images/twitter-logo.png') center right no-repeat;}
+
+
+/*** Responsive Styles ***/
+
+/* Tablet Landscape (All Screens Up to 1280px) */
+@media only screen
+and (max-width: 1280px){
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-item .menu-item-text{font-size: 14px;}
+#siteIcon {min-width: 183px; height: 34px; line-height: 34px; margin-right: 60px;}
+.ms-siteicon-img{max-width: 183px; max-height: 34px; padding-left: 30px;}
+.ms-mpSearchBox{width: 210px;}
+.ms-mpSearchBox .ms-srch-sb>input {width: 130px;}
+}
+
+/* Tablet Landscape (All Screens Up to 1024px) */
+@media only screen
+and (max-width: 1024px){
+.ms-breadcrumb-top {padding-top: 0px;}
+.ms-siteicon-img{padding-top: 0px;}
+#s4-titlerow{position: relative; padding-bottom: 30px;}
+#DeltaPlaceHolderSearchArea{display: block; position: absolute; bottom: 0px; left: 0px; width: 100%; float: none;}
+#DeltaPlaceHolderSearchArea #searchInputBox{float: none;}
+#DeltaPlaceHolderSearchArea .ms-srch-sb{display: block;}
+.ms-mpSearchBox{width: 100%;}
+.ms-mpSearchBox .ms-srch-sb>input {width: 100%; margin-right: -60px;}
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-item .menu-item-text{font-size: 12px;}
+}
+
+/* Tablet Portait (All Screens Up to 768px) */
+@media only screen
+and (max-width: 768px){
+#s4-titlerow {height: 90px;}
+#s4-titlerow #titleAreaBox{margin: 0px; padding: 0px; width: 100%;}
+#titleAreaRow .ms-tableCell{display: block; width: 100%; text-align: left; margin: 0px; padding: 0px;}
+.ms-siteicon-img{padding-left: 24px;}
+#gpl-footer{padding: 20px 0px 20px 0px;}
+.gpl-footertext{display: block; text-align: center; width: 100%;}
+.gpl-copyright{margin: 0px;}
+.gpl-footerinfo{display: block; float: none; text-align: center; width: 100%; margin-right: 0px; padding: 10px 0px 0px 0px;}
+.ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {margin-right: 15px;}
+}
+/* Phone Portait (All Screens Up to 480px) */
+@media only screen
+and (max-width: 480px){
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-item .menu-item-text{font-size: 10px;}
+.ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {margin-right: 10px;}
+}
+
+/*** Submit Feedback ***/
+#contact-area {
+	margin-top: 25px;
+}
+
+#contact-area input, #contact-area textarea {
+	padding: 5px;
+	width: 471px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #ccc;
+}
+
+#contact-area textarea {
+	height: 90px;
+}
+
+#contact-area textarea:focus, #contact-area input:focus {
+	border: 2px solid #900;
+}
+
+#contact-area input.submit-button {
+	width: 100px;
+	float: right;
+}
+
+#contact-area label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+	padding-top: 5px;
+	font-size: 1.4em;
+}
+
+/*** Open Positions ***/
+.hot-job-title {
+ font-family: 'AkzidenzGroteskPro-Bold';
+	font-size: 16px;
+	line-height: 1.31;
+	letter-spacing: 1.3px;
+	color: #042f5d;
+}
+
+.hot-job-details {
+  font-family: 'AkzidenzGroteskPro';
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  color: #6d6f72;
+}

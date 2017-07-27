@@ -1,0 +1,297 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>News Item</title>
+<style type='text/css'>
+.cbs-picture3LinesContainer, .cbs-Detail {
+	max-width:450px;
+	padding-top:0px;
+	border: 1px solid red;
+
+}
+
+.cbs-picture3LinesImageContainer {
+	width:194px;
+	height:146px;
+	/*margin-bottom:30px*/
+	border: 1px solid blue;
+	background-color: yellow;
+}
+
+.cbs-picture3LinesImageContainer img {
+	width:110px;
+	height:75px;
+	border: 1px solid green;
+
+}
+
+
+.newsParentTitleContainer {
+	max-width:340px;
+	margin-left:0px;
+	vertical-align:top
+	border: 1px solid blue;
+	background-color: pink;
+}
+
+.newsAllDataContainer, .newsAllTitleContainer {
+	max-width:710px;
+	margin-left:0px;
+	border: 1px solid blue;
+
+}
+
+.newsDeptTitleContainer {
+    margin-left: 0px;
+		border: 1px solid blue;
+
+}
+
+.newsParentImageContainer {
+	width:140px;
+	height:140px;
+	margin-bottom:25px
+	border: 1px solid blue;
+
+
+	}
+
+.newsParentImageContainer img {
+	width:140px;
+	height:140px;
+	border: 1px solid blue;
+
+}
+
+.newsParentDataContainer {
+	vertical-align: top;
+	margin-left: 196px;
+	max-width: 355px;
+	width: 252px;
+	border: 1px solid blue;
+	/* display: inline-block; */
+	/* float: left; */
+	/*position: relative;
+	bottom: 142px;
+	float: left;
+	right: 4px;*/
+
+}
+
+.newsAllDataContainer {
+	margin-left:160px;
+	/*border: 1px solid purple;*/
+
+	max-width:550px;
+}
+
+
+.newsParentDataContainer .AllLink {
+	float:right;
+	padding-top:0px;
+	border: 1px solid yellow;
+	background-color: red;
+
+	margin-right:0px;
+}
+
+.AllLink a:link {
+	color:#0b1f8f;
+	font-size:14px;
+	margin-left:10px;
+}
+
+.AllLink a:visited {
+	color:#0b1f8f;
+}
+
+
+.news-container {
+	width: 425px;
+	height: auto;
+	border: 1px solid black;
+}
+.news-img-container {
+	width: 194px;
+	height: 146;
+	border: 1px solid red;
+}
+.news-img {
+	width: 194px;
+	height: 146;
+}
+.news-data-container {
+	border: 1px black solid;
+	height: auto;
+	width: 200px;
+	float: left;
+}
+.news-title-container {
+	background-color: red;
+	border: 1px blue solid;
+}
+
+.news-title-text-container {
+}
+
+.news-date-container {
+}
+
+
+
+
+</style>
+<script type='text/javascript'>
+
+$("cbs-picture3LinesContainer").css("background-color", "red");
+
+</script>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{Picture URL}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{Link URL}:'Path','Line 1'{Line 1}:'Title','Line 2'{Line 2}:'RefinableDate01','PublishingPageContent'{PublishingPageContent}:'PublishingPageContentOWSHTML','FileExtension','SecondaryFileExtension',</mso:ManagedPropertyMapping>
+<mso:MasterPageDescription msdt:dt="string">This Item Display Template is used to display News and Announcements. It will also truncate content to 250 characters.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://insulet.sharepoint.com/sites/IntranetDev/_catalogs/masterpage/Display Templates/Content Web Parts/News_Item.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <!--
+            Warning: Do not try to add HTML to this section. Only the contents of the first <div>
+            inside the <body> tag will be used while executing Display Template code. Any HTML that
+            you add to this section will NOT become part of your Display Template.
+    -->
+
+    <!--
+        Use the div below to author your Display Template. Here are some things to keep in mind:
+        * Surround any JavaScript logic as shown below using a "pound underscore" (#_ ... _#) token
+        inside a comment.
+
+        * Use the values assigned to your variables using an "underscore pound equals"
+        (_#= ... =#_) token.
+    -->
+    <div id="NewsHomePage">
+
+<!--#_
+
+var encodedId = $htmlEncode(ctx.ClientControl.get_nextUniqueId() + "_picture3Lines_");
+
+var siteCollectionURL = SP.PageContextInfo.get_siteAbsoluteUrl();
+var siteURL = _spPageContextInfo.webServerRelativeUrl;
+
+var linkURL = $getItemValue(ctx, "Link URL");
+
+var line1 = $getItemValue(ctx, "Line 1");
+var line2 = $getItemValue(ctx, "Line 2");
+line1.overrideValueRenderer($contentLineText);
+line2.overrideValueRenderer($contentLineText);
+
+
+
+var pictureURL = $getItemValue(ctx, "Picture URL");
+var pictureId = encodedId + "picture";
+var pictureURL2 = "https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/insuletnews.png";
+
+
+//apply default image if picture is blank
+              if(!pictureURL.isEmpty){
+                             var pictureMarkup = Srch.ContentBySearch.getPictureMarkup(pictureURL, 0, 0, ctx.CurrentItem, "cbs-picture3LinesImg", line1, pictureId);
+              }
+              else
+              {
+                             var pictureMarkup = "<img src='" + pictureURL2 + "' class='cbs-picture3LinesImg' alt='" + line1 + "' id='" + pictureId + "' onerror='this.parentNode.innerHTML=Srch.ContentBySearch.getNoPictureMarkup(100);' onload='Srch.ContentBySearch.resizeImageToSquareLength(this, 100);'/>";
+              }
+
+
+var containerId = encodedId + "container";
+var pictureLinkId = encodedId + "pictureLink";
+var pictureContainerId = encodedId + "pictureContainer";
+var dataContainerId = encodedId + "dataContainer";
+var line1LinkId = encodedId + "line1Link";
+var line1Id = encodedId + "line1";
+var line2Id = encodedId + "line2";
+
+//format the date field in line 2
+var parseDate= new Date(line2.inputValue);
+var line2Date = parseDate.format('MM/dd/yyyy');
+
+
+
+//display first 250 characters of Publishing Page Content
+var PublishingPageContentHTML = $getItemValue(ctx, "PublishingPageContent");
+var div = document.createElement("div");
+div.innerHTML= PublishingPageContentHTML;
+var PublishingPageContentL = div.textContent|| div.innerText|| "";
+var PublishingPageContent = "";
+              if (PublishingPageContentL.toString().length > 250) {
+                             PublishingPageContent = PublishingPageContentL.toString().substring(0,250) + "...";
+              }
+              else {
+                             PublishingPageContent = PublishingPageContentL;
+              }
+
+
+var dataDisplayTemplateTitle = "ItemPicture3Lines";
+_#-->
+        <div class="news-container" id="_#= containerId =#_" data-displaytemplate="_#= $htmlEncode(dataDisplayTemplateTitle) =#_">
+            <div class="news-img-container" id="_#= pictureContainerId =#_">
+<!--#_
+if(!linkURL.isNotEmpty)
+{
+_#-->
+
+                <a class="news-img" href="_#= linkURL =#_" title="_#= $htmlEncode(line1.defaultValueRenderer(line1)) =#_" id="_#= pictureLinkId =#_"
+
+                  >
+<!--#_
+}
+_#-->
+
+                    _#= pictureMarkup =#_
+<!--#_
+if(!linkURL.isEmpty)
+{
+_#-->
+                </a>
+<!--#_
+}
+_#-->
+            </div>
+            <div class="news-data-container" id="_#= dataContainerId =#_">
+              <div class="news-title-container" id="_#= dataContainerId =#_">
+                <div class="news-title-text-container"><a href="_#= linkURL =#_" title="_#= $htmlEncode(line1.defaultValueRenderer(line1)) =#_" id="_#= line1LinkId =#_"> _#= line1 =#_</a></div>
+                </div>
+<!--#_
+if(!line2.isEmpty)
+{
+_#-->
+                <div class="news-date-container" title="_#= $htmlEncode(line2.defaultValueRenderer(line2)) =#_" id="_#= line2Id =#_" >Posted _#= line2Date =#_</div>
+<!--#_
+}
+
+// Check if it is the last item to process, then display URL
+var currentItemIdx = ctx.CurrentItemIdx + 1;
+//var imgURL = "https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/news.png";
+var pageURL = siteURL + "/Pages/News.aspx";
+if(currentItemIdx === ctx.CurrentGroup.RowCount) {
+_#-->
+<br>
+<hr class='hrseparatorParentNews'>
+<div class="AllLink"><a href="_#= $htmlEncode(pageURL) =#_">View All</a></div>
+<!--#_
+}
+_#-->
+                                           </div>
+        </div>
+    </div>
+</body>
+</html>

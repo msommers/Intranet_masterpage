@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type='text/css'>
+
+      /*----------General Structrue, Spacing, Font Styling -----------*/
+      .bold-text {
+        font-family: 'AkzidenzGroteskPro-Bold';
+      }
+
+      .cal-and-events-container {
+        /*width: 100%;*/
+        width: 370px;
+        background-color: #D8D8D8;
+        height: 267px;
+        /*max-height: 267px;*/
+      }
+
+
+
+      /*---------- Styling for Date Icons (Left side of WP)  -----------*/
+
+      .future-dates-container {
+        width: 20%;
+        height: 100%;
+        float: left;
+        clear: right;
+        color: white;
+      }
+
+      .future-event-container {
+        width: 100%;
+        height: 20%;
+        background-color: #9B9B9B;
+      }
+
+      .future-event-text-container {
+        padding-top: 10%;
+        text-align: center;
+        color: white;
+        /*color: black;*/
+
+
+      }
+
+      #event-one:hover,
+      #event-two:hover,
+      #event-three:hover,
+      #event-four:hover {
+        background-color: black;
+        /*color: white;*/
+      }
+
+      #see-more:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+
+      .highlighted {
+        background-color: black;
+        color: white;
+      }
+
+      .see-more-container {
+        width: 100%;
+        height: 20%;
+        background-color: #D8D8D8;
+      }
+
+      /*---------- Styling Inside Event-Info Container (Right Side of WP) -----------*/
+
+
+      .event-content {
+        height: 100%;
+        width: 80%;
+        background-color: #4A4A4A;
+        display: inline-block;
+        float: left;
+      }
+
+      .event-name-container {
+        width: 100%;
+        height: 20%;
+        background-color: #4A4A4A;
+
+
+      }
+      .event-date-container {
+        width: 100%;
+        height: 20%;
+        background-color: #000000;
+
+      }
+      .event-description-container {
+        height: 55%;
+        background-color: #4A4A4A;
+        color: white;
+        /*width: 355px;
+        white-space:nowrap;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;*/
+
+      }
+
+      .one-line-text-break {
+         width:inherit;
+         -o-text-overflow: ellipsis;
+         -ms-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+         overflow: hidden;
+          width: 90%;
+          display: block;
+          white-space: nowrap;
+      }
+      .event-name-text-container {
+        padding: 20px 10px 0px 10px;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 1px;
+        /*width: 90%;*/
+
+      }
+      .event-date-text-container {
+        padding: 10px 10px 0px 10px;
+        color: white;
+        letter-spacing: 1px;
+      }
+      .event-description-text-container {
+        overflow: hidden;
+        letter-spacing: 1px;
+        white-space: normal;
+        -o-text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        /*width: 330px;*/
+        /*width: 90%;*/
+        /*height: 90px;*/
+        /*display: inline-block;*/
+        /*max-width: 337.99px;*/
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        padding: 10px 10px 0px 10px;
+        color: white;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .cal-view-page {
+        color: white;
+        text-align: right;
+        padding-right: 15px;
+        font-size: 14px;
+      }
+      .text-block {
+        max-width: 337.99px;
+      }
+      .black-text {
+        color: black;
+      }
+      .white-text {
+        color: white;
+      }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type='text/javascript'>
+      "use strict";
+      $(()=>{
+// ----------- Handles the text's color tranformation when hovered on
+        $("#event-one").mouseenter(function(){
+          $("#event-one-text").removeClass("black-text");
+        });
+        $("#event-two").mouseenter(function(){
+          $("#event-two-text").removeClass("black-text");
+        });
+        $("#event-three").mouseenter(function(){
+          $("#event-three-text").removeClass("black-text");
+        });
+        $("#event-four").mouseenter(function(){
+          $("#event-four-text").removeClass("black-text");
+        });
+        $("#see-more").mouseenter(function(){
+          $("#see-more-text").removeClass("black-text");
+        });
+// ----------- Handles the text's color tranformation when other elements are hovered on
+        $("#event-one").mouseleave(function(){
+          $("#event-one-text").addClass("black-text");
+        });
+        $("#event-two").mouseleave(function(){
+          $("#event-two-text").addClass("black-text");
+        });
+        $("#event-three").mouseleave(function(){
+          $("#event-three-text").addClass("black-text");
+        });
+        $("#event-four").mouseleave(function(){
+          $("#event-four-text").addClass("black-text");
+        });
+        $("#see-more").mouseleave(function(){
+          $("#see-more-text").addClass("black-text");
+        });
+// ---- Handles the load-screen layout -----
+        $("#event-one-text").removeClass("black-text");
+        $("#event-one-text").addClass("white-text");
+        $(".event-two").hide();
+        $(".event-three").hide();
+        $(".event-four").hide();
+
+// ------ Handles activity needed when referenced element is clicked & strips other classes.
+        $("#event-one").click(function(){
+          $("#event-one-text").removeClass("black-text");
+          $("#event-one-text").addClass("white-text");
+          $("#event-three-text, #event-four-text, #event-two-text").removeClass("white-text");
+          $("#event-three-text, #event-four-text, #event-two-text").addClass("black-text");
+          $("#event-one").addClass("highlighted");
+          $("#event-two, #event-three, #event-four, #see-more").removeClass("highlighted");
+          $(".event-one").show();
+          $(".event-two, .event-three, .event-four").hide();
+        });
+
+  // ------ Handles activity needed when referenced element is clicked & strips other classes.
+        $("#event-two").click(function(){
+          $("#event-two-text").removeClass("black-text");
+          $("#event-two-text").addClass("white-text");
+          $("#event-three-text, #event-one-text, #event-four-text").removeClass("white-text");
+          $("#event-three-text, #event-four-text, #event-one-text").addClass("black-text");
+          $("#event-two").addClass("highlighted");
+          $("#event-one, #event-three, #event-four, #see-more").removeClass("highlighted");
+          $(".event-two").show();
+          $(".event-one, .event-three, .event-four").hide();
+
+        });
+// ------ Handles activity needed when referenced element is clicked & strips other classes.
+        $("#event-three").click(function(){
+          $("#event-three-text").removeClass("black-text");
+          $("#event-three-text").addClass("white-text");
+          $("#event-two-text, #event-four-text, #event-one-text").removeClass("white-text");
+          $("#event-one-text, #event-two-text, #event-four-text").addClass("black-text");
+          $("#event-three").addClass("highlighted");
+          $("#event-one, #event-two, #event-four, #see-more").removeClass("highlighted");
+          $(".event-three").show();
+          $(".event-one, .event-two, .event-four").hide();
+        });
+// ------ Handles activity needed when referenced element is clicked & strips other classes.
+        $("#event-four").click(function(){
+          $("#event-four-text").removeClass("black-text");
+          $("#event-four-text").addClass("white-text");
+          $("#event-two-text, #event-three-text, #event-one-text").removeClass("white-text");
+          $("#event-one-text, #event-two-text, #event-three-text").addClass("black-text");
+          $("#event-four").addClass("highlighted");
+          $("#event-one, #event-two, #event-three, #see-more").removeClass("highlighted");
+          $(".event-four").show();
+          $(".event-one, .event-three, .event-two").hide();
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class='cal-and-events-container'>
+      <div class='future-dates-container'>
+        <div id='event-one' class='future-event-container highlighted'><div class='future-event-text-container'> 4th<br><span id='event-one-text' class='black-text'>Aug</span></div></div>
+        <div id='event-two' class='future-event-container'><div class='future-event-text-container'>14th<br><span id='event-two-text' class='black-text'>Sept</span></div></div>
+        <div id='event-three' class='future-event-container'><div class='future-event-text-container'>18th<br><span id='event-three-text' class='black-text'>Oct</span></div></div>
+        <div id='event-four' class='future-event-container'><div class='future-event-text-container'> 4th<br><span id='event-four-text' class='black-text'>Dec</span></div></div>
+        <a href='https://insulet.sharepoint.com/sites/IntranetDev/Lists/Calendar/calendar.aspx'><div id='see-more' class='see-more-container'><div class='future-event-text-container'><em><span id='see-more-text' class='black-text'>See<br>More</span></em></div></div></a>
+
+      </div>
+      <div class='event-content'>
+        <div class='event-name-container'>
+          <div class='event-name-text-container event-one bold-text'><span class='one-line-text-break'>AADE HCP Tradeshow 2017</span></div>
+          <div class='event-name-text-container event-two bold-text'><span class='one-line-text-break'>International Ped Endo Society Meeting</span></div>
+          <div class='event-name-text-container event-three bold-text'><span class='one-line-text-break'>Intl. Society for Pediatric and Adolescent Diabetes Conference</span></div>
+          <div class='event-name-text-container event-four bold-text'><span class='one-line-text-break'>IDF Tradeshow 2017</span></div>
+        </div>
+        <div class='event-date-container'>
+          <div class='event-date-text-container event-one'><span>August 4th 2017<br>All Day Event</span></div>
+          <div class='event-date-text-container event-two'><span>September 14th <br> - September 17th</span></div>
+          <div class='event-date-text-container event-three'><span>October 18th - 21st</span><br>All Day Events: 8:00am - 5:00pm</div>
+          <div class='event-date-text-container event-four'><span>December 4th - 8th<br>All Day Event</span></div>
+        </div>
+        <div class='event-description-container'>
+          <div class='event-description-text-container event-one'><span class='text-block'>AADE17 will be packed with expert – speakers in the field of diabetes education, thought provoking panel discussions, stimulating educational sessions, share innovative ideas, network with leaders in diabetes care and colleagues, the opportunity to earn continuing education credits and have fun!</span>
+            <!-- <div class='cal-view-page'><a href='https://insulet.sharepoint.com/sites/IntranetDev/Lists/Calendar/DispForm.aspx?ID=9&Source=https%3A%2F%2Finsulet%2Esharepoint%2Ecom%2Fsites%2FIntranetDev%2FLists%2FCalendar%2Fcalendar%2Easpx'>Learn More</a></div> -->
+          </div>
+          <div class='event-description-text-container event-two'><span class='text-block'>PES is proud to host the 10th International Meeting of Pediatric Endocrinology. This meeting continues a tradition of Joint Meetings of Pediatric Endocrinology, initiated in 1981, appropriately updated for 2017 to "International Meeting" to highlight the truly worldwide community of our specialty. More information is available on the Meeting Website.</span>
+              <!-- <div class='cal-view-page'><a href='https://insulet.sharepoint.com/sites/IntranetDev/Lists/Calendar/DispForm.aspx?ID=10&Source=https%3A%2F%2Finsulet%2Esharepoint%2Ecom%2Fsites%2FIntranetDev%2FLists%2FCalendar%2Fcalendar%2Easpx'>Learn More</a></div> -->
+          </div>
+          <div class='event-description-text-container event-three'><span class='text-block'>The INTERNATIONAL SOCIETY for PEDIATRIC and ADOLESCENT DIABETES (ISPAD) is a professional organization whose aims are to promote clinical and basic science, research, education and advocacy in childhood and adolescent diabetes. The strength of ISPAD lies in the scientific and clinical expertise in childhood and adolescent diabetes of its members. ISPAD is the only international society focusing specifically on all types of childhood diabetes. All forms of diabetes treatment in childhood should be based upon scientific evidence or clinical consensus. Parents are urged to contact their doctor regarding any type of treatment to take part of the evidence for it.</span>
+            <!-- <div class='cal-view-page'><a href='https://insulet.sharepoint.com/sites/IntranetDev/Lists/Calendar/DispForm.aspx?ID=11&Source=https%3A%2F%2Finsulet%2Esharepoint%2Ecom%2Fsites%2FIntranetDev%2FLists%2FCalendar%2Fcalendar%2Easpx'>Learn More</a></div> -->
+          </div>
+          <div class='event-description-text-container event-four'><span class='text-block'>The IDF Annual Conference is excited to welcome everyone to Abu Dhabi! This year's event is going to be spectacular! </span>
+              <!-- <div class='cal-view-page'><a href='https://insulet.sharepoint.com/sites/IntranetDev/Lists/Calendar/calendar.aspx'>Learn More</a></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

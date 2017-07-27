@@ -1,0 +1,242 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>List</title>
+<style type='text/css'>
+.calender-content {
+  width: 60%;
+  background-color: red;
+  float:right;
+  border: 1px black solid;
+  height: 400px;
+}
+.new-cbs-List{
+  width: 30%;
+  background-color: yellow;
+  float:left;
+  border: 1px red solid;
+}
+
+#Control_List {
+  border: 1px solid black;
+  height: auto;
+  width: auto;
+}
+ul.cbs-List {
+	margin:0px;
+	width: 100%;
+}
+
+ul.cbs-List .cbs-Item{
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+
+ul.cbs-List .cbs-Detail{
+	padding-bottom: 5px;
+}
+ul.cbs-List .cbs-Detail a{
+	font-size: 16px;
+	color: #606060;
+}
+ul.cbs-List .cbs-Detail a:hover{
+	color: #fe402c;
+}
+
+
+ul.cbs-List .cbs-Thumbnail{
+	height: auto;
+	width: 20px;
+	padding-bottom: 7px;
+}
+
+
+ul.cbs-List span.cbs-ItemLink{
+	font-size: 24px;
+	color: #1a96b5;
+	margin-top: -7px;
+	padding-bottom: 7px;
+}
+
+
+ul.cbs-List .AllLink {
+	float:right;
+	padding-top:0px;
+	margin-right:0px;
+}
+.calender-and-events-container {
+	height: 371px;
+	width: 433px;
+	background-color: #D8D8D8;
+	margin: 0;
+	font-family: "AkzidenzGroteskPro";
+
+}
+.calender-title-container {
+	background-color: #54C0EB;
+	height: 42px;
+	width: 100%;
+	color: white;
+	text-align: left;
+	font-family: "AkzidenzGroteskPro";
+	opacity: 0.63;
+}
+
+.calender-title-text {
+	padding-left: 10px;
+	text-align: left;
+	color: white;
+	font-family: "AkzidenzGroteskPro";
+	font-size: 20px;
+	padding-top: 10px;
+
+}
+#one:hover{
+	background-color: white;
+	color: black;
+}
+#two:hover{
+	background-color: white;
+	color: black;
+}
+#three:hover{
+	background-color: white;
+	color: black;
+}
+#four:hover{
+	background-color: white;
+	color: black;
+}
+
+.highlighted {
+background-color: white;
+color: black;
+}
+
+.calender-content {
+	/*border: 1px #4A4A4A solid;*/
+	background-color: #4A4A4A;
+	color: white;
+	width: 353px;
+	height: 329px;
+	float: left;
+}
+.event-description {
+	padding-right: 20px;
+	color: white;
+}
+.event-dates {
+	background-color: #000000;
+	color: white;
+	width: auto;
+}
+.event-title {
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+}
+.spacer {
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.future-date-li {
+	width: 80px;
+	border: 1px black solid;
+	height: 80px;
+	float: left;
+	opacity: 0.77;
+	background-color: #9B9B9B;
+	color: white;
+	text-overflow: clip;
+
+
+}
+
+.future-dates-ul {
+	list-style-type: none;
+	bottom: 16px;
+	position: relative;
+	/*top: 26px;*/
+	width: 40px;
+	float:left;
+	right: 40px;
+	/*margin-top: 43px;*/
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">This is the default Control Display Template that will list the items. It does not allow the user to page through items.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106601</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+    <!--
+            Warning: Do not try to add HTML to this section. Only the contents of the first <div>
+            inside the <body> tag will be used while executing Display Template code. Any HTML that
+            you add to this section will NOT become part of your Display Template.
+    -->
+    <script>
+        $includeLanguageScript(this.url, "~sitecollection/_catalogs/masterpage/Display Templates/Language Files/{Locale}/CustomStrings.js");
+    </script>
+
+    <!--
+        Use the div below to author your Display Template. Here are some things to keep in mind:
+        * Surround any JavaScript logic as shown below using a "pound underscore" (#_ ... _#) token
+        inside a comment.
+
+        * Use the values assigned to your variables using an "underscore pound equals"
+        (_#= ... =#_) token.
+    -->
+
+    <div id="Control_List">
+
+<!--#_
+if (!$isNull(ctx.ClientControl) &&
+    !$isNull(ctx.ClientControl.shouldRenderControl) &&
+    !ctx.ClientControl.shouldRenderControl())
+{
+    return "";
+}
+ctx.ListDataJSONGroupsKey = "ResultTables";
+var $noResults = Srch.ContentBySearch.getControlTemplateEncodedNoResultsMessage(ctx.ClientControl);
+
+var noResultsClassName = "ms-srch-result-noResults";
+
+var ListRenderRenderWrapper = function(itemRenderResult, inCtx, tpl)
+{
+    var iStr = [];
+    iStr.push('<li>');
+    iStr.push(itemRenderResult);
+    iStr.push('</li>');
+    return iStr.join('');
+}
+ctx['ItemRenderWrapper'] = ListRenderRenderWrapper;
+_#-->
+    <ul class="new-cbs-List">
+
+            _#= ctx.RenderGroups(ctx) =#_
+    </ul>
+
+    <div class='calender-content'>
+
+    </div>
+<!--#_
+if (ctx.ClientControl.get_shouldShowNoResultMessage())
+{
+_#-->
+        <div class="_#= noResultsClassName =#_">_#= $noResults =#_</div>
+<!--#_
+}
+_#-->
+
+    </div>
+</body>
+</html>

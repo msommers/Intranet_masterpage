@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type='text/css'>
+    .bold {
+      font-family: 'AkzidenzGroteskPro-Bold';
+    }
+    .it-functions-container {
+      color: #4A4A4A;
+      background: transparent;
+      /*width: 357px;*/
+      height: auto;
+      font-size: 16px;
+    }
+    .it-functions-ul {
+      list-style-type: none;
+    }
+    .page-btn {
+      float:right;
+      cursor: pointer;
+    }
+    .view-count {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .display-control {
+      height: 15%;
+    }
+    .it-info {
+        height: 80%;
+    }
+    .it-function-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #4A4A4A;
+      letter-spacing: 1.25px;
+      font-family: "AkzidenzGroteskPro-Bold";
+    }
+    .it-function-container {
+      padding: 5% 5% 0% 5%;
+      min-height: 365px;
+      max-height: 365px;
+      height: 365px;
+    }
+    .turn {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+      margin-right: 5px;
+    }
+    .it-function-descr {
+      line-height: 36px;
+      overflow: hidden;
+    }
+
+    </style>
+    <script type='text/javascript'>
+    "use strict";
+    $(()=> {
+      $(".di-container").hide();
+      $(".co-container").hide();
+      $(".ax-container").hide();
+      $(".in-next-btn").click(function(){
+        $(".in-container").hide();
+        $(".di-container").show();
+      });
+      $(".in-prev-btn").click(function(){
+        $(".in-container").hide();
+        $(".ax-container").show();
+      });
+      $(".di-next-btn").click(function(){
+        $(".di-container").hide();
+        $(".co-container").show();
+      });
+      $(".di-prev-btn").click(function(){
+        $(".di-container").hide();
+        $(".in-container").show();
+      });
+      $(".co-next-btn").click(function(){
+        $(".co-container").hide();
+        $(".ax-container").show();
+      });
+      $(".co-prev-btn").click(function(){
+        $(".co-container").hide();
+        $(".di-container").show();
+      });
+      $(".ax-next-btn").click(function(){
+        $(".ax-container").hide();
+        $(".in-container").show();
+      });
+      $(".ax-prev-btn").click(function(){
+        $(".ax-container").hide();
+        $(".co-container").show();
+      });
+    });
+    $(document).ready(function() {
+      function applyJquery() {
+    // ------ Banner - WP 6
+    $("#MSOZoneCell_WebPartWPQ6").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
+    // ------ IT Functions  WP 2
+    $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ2").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartWPQ2").removeClass("ms-WPBorder");
+    // ------- Quick Links --- WP 5
+
+    $("#MSOZoneCell_WebPartWPQ5").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ5 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ5").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartWPQ5").css("width", "100%").removeClass("ms-WPBorder");
+    // -------- Our Team --- WP 4
+    $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ4").css("background-color", "#F89C05").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#OurTeam").css("padding", "32px 15px 30px 15px");
+    $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("display", "none");
+    $("#OurTeam > div > div.contact-item > div.contact-item > hr").after("<div class='it-team-view-all'><a href='https://insulet.sharepoint.com/sites/IntranetDev/IT/Pages/members.aspx'>View All</a></div>");
+    $(".it-team-view-all").css("text-align", "right").css("padding-right", "15px").css("float","right").css("margin-bottom","30px");
+    //------------ Logo
+    $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
+    $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
+    // -------- Ticker WP7
+    $("#MSOZoneCell_WebPartWPQ7").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ7 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ7").css("background-color", "#293896").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    // ----- Calender --- WP 3
+    $("#MSOZoneCell_WebPartWPQ3").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
+    $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ3").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    }
+      setTimeout(applyJquery, 1000);
+    });
+    </script>
+  </head>
+  <body>
+    <div class='it-functions-container'>
+        <div class='in-container it-function-container'>
+          <div class='it-info'>
+            <div class='it-function-title bold'><strong>Infrastructure</strong></div><br>
+            <div class='it-function-descr'>
+              The Infrastructure team supports the technology Insulet uses every day, from your laptop, phone and email to data centers, telecommunications and cyber security.  We can help you solve issues and provide solutions. As always, If you have questions or issues with a piece of technology, let us know at our helpdesk.
+            </div>
+          </div>
+          <div class='display-control'>
+            <div class='in-page-count view-count'>1 of 4</div>
+            <div class='in-next-btn page-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            <div class='in-prev-btn page-btn'><img class='turn' src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+          </div>
+        </div>
+        <div class='di-container it-function-container'>
+          <div class='it-info'>
+            <div class='it-function-title bold'><strong>Digital</strong></div><br>
+            <div class='it-function-descr'>
+            The Digital Team is responsible for developing, testing, and implementing a strategy to reach and engage target audiences through digital channels like web, mobile, and social. We are also responsible for implementing cross-channel analytics, sufacing relevant emerging trends, and providing comprehensive guidelines.
+            </div>
+          </div>
+          <div class='display-control'>
+            <div class='di-page-count view-count'>2 of 4</div>
+            <div class='di-next-btn page-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            <div class='di-prev-btn page-btn'><img class='turn'  src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+          </div>
+        </div>
+        <div class='co-container it-function-container'>
+          <div class='it-info'>
+            <div class='it-function-title bold'><strong>Commercial</strong></div><br>
+            <div class='it-function-descr'>
+              Commercial Systems enables Insulet business units through process design, platform implementation, and strategic partnership related to improving our commercial growth and sustainment.  The primary platforms supported and improved by Commercial Systems are Salesforce.com, Snaplogic for integrations and our Marketing automation program.
+            </div>
+          </div>
+          <div class='display-control'>
+            <div class='co-page-count view-count'>3 of 4</div>
+            <div class='co-next-btn page-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            <div class='co-prev-btn page-btn'><img class='turn'  src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+          </div>
+        </div>
+        <div class='ax-container it-function-container'>
+          <div class='it-info'>
+            <div class='it-function-title bold'><strong>AX / Salesforce</strong></div><br>
+            <div class='it-function-descr'>
+              Insulet's IT department leverages information and digital capabilities to build customer ecosystems and drive product loyalty and growth. We constantly strive to explore and adopt new technologies to drive new product and business model innovation. Our goal is to be viewed as true strategic business partners, understanding the industry and business direction and collaborating on how to leverage IT for business value.
+            </div>
+          </div>
+          <div class='display-control'>
+            <div class='ax-page-count view-count'>4 of 4</div>
+            <div class='ax-next-btn page-btn'><img src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+            <div class='ax-prev-btn page-btn'><img class='turn'  src='https://insulet.sharepoint.com/sites/IntranetDev/Style%20Library/Insulet/Images/Triangle%202.png'></div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

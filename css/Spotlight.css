@@ -1,0 +1,230 @@
+﻿.image-slider {
+/*	max-width:1400px; */
+	width: 100%;
+	padding:0px;
+	position:relative;
+	z-index:0;
+}
+
+.image-slider .container{
+	width: auto;
+	height:300px;
+	position:relative;
+}
+
+
+
+/*
+	Slideshow
+*/
+
+.image-slider .slides {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:100;
+	width: 100%;
+}
+
+.image-slider .container .slide img{
+	width: 100% !important;
+	height: auto !important;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+/*	max-width:1400px; */
+	height:300px;
+	width: 100%;
+	position:relative;
+	display:none;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+.slides_container div.slide {
+/*	max-width:1400px; */
+	height:300px;
+	display:block;
+	position: relative;
+}
+
+.slides_container .slides_control {
+	width: 100% !important; */
+}
+
+
+
+/*
+	Next/prev buttons
+*/
+
+.slides .next,.slides .prev {
+	position:absolute;
+	top:107px;
+	left:-39px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+}
+
+.slides .next {
+	left:585px;
+}
+
+.slidetitle{
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+	z-index:105;
+	font-family: 'AkzidenzGroteskPro';
+	font-size: 34px;
+	color: #FFF;
+	text-transform: capitalize;
+	max-width:600px;
+	line-height:0.9;
+	padding: 30px 60px 50px 60px;
+	background-color: rgba(13, 29, 110, 0.6);
+}
+
+.slidetitle a {
+	font-size: 16px;
+	color:#fff;
+}
+
+.slidetitle a:hover {
+	color:#fff !important;
+	text-decoration: underline;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	margin:20px auto 0px auto;
+	width: auto;
+	position: absolute;
+	bottom: 50px;
+	right: 40px;
+	z-index:105;
+
+}
+
+.pagination li {
+	float:left;
+	margin:0px 0px 0px 5px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	float:left;
+	overflow:hidden;
+	background-color: rgba(255, 255, 255, .0);
+	border: 2px rgba(255, 255, 255, .6) solid;
+	border-radius: 12px;
+
+}
+
+.pagination li.current a {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+
+/****The following CSS is used to style the home page only and was included in the Slider CSS (slider is unique to the homepage)*****/
+
+.ms-PartSpacingVertical {
+                MARGIN-TOP: 0px
+}
+.s4-wpcell-plain {
+                PADDING-BOTTOM: 20px
+}
+.ms-WPBorderBorderOnly .groupmarker {
+                PADDING-BOTTOM: 0px; PADDING-TOP: 1px; PADDING-LEFT: 2px
+}
+
+
+
+/*Hide left navigation*/
+#sideNavBox {
+display: none;
+}
+
+/*Hide Page Title*/
+.ms-core-pageTitle {
+display:none;
+}
+
+#contentBox {
+margin-right:0px;
+margin-left:0px;
+}
+
+/* Banner Styles */
+.gpl-banner{padding: 0px; margin-bottom: -50px;}
+
+/* Hide web part container style for Slider */
+.gpl-banner .ms-webpartzone-cell{
+background-color:transparent;
+box-shadow: none;
+padding: 0px;
+}
+
+@media only screen
+and (max-width: 1300px){.image-slider .container, .slides_container, .slides_container div.slide{height:240px;}}
+
+@media only screen
+and (max-width: 1200px){.image-slider .container, .slides_container, .slides_container div.slide{height:220px;}}
+
+@media only screen
+and (max-width: 1100px){.image-slider .container, .slides_container, .slides_container div.slide{height:200px;}}
+
+@media only screen
+and (max-width: 1000px){.image-slider .container, .slides_container, .slides_container div.slide{height:180px;}}
+
+@media only screen
+and (max-width: 900px){.image-slider .container, .slides_container, .slides_container div.slide{height:160px;}}
+
+@media only screen
+and (max-width: 800px){.image-slider .container, .slides_container, .slides_container div.slide{height:140px;}}
+
+@media only screen
+and (max-width: 700px){
+.image-slider .container, .slides_container, .slides_container div.slide{height:120px;}
+.slidetitle{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 20px 30px 15px 30px;
+	font-size: 24px;
+}
+.gpl-banner {margin-bottom: 0px;}
+.pagination {margin:0px auto 0px auto;bottom: 20px;}
+
+}
+
+@media only screen
+and (max-width: 600px){.image-slider .container, .slides_container, .slides_container div.slide{height:100px;}}
+
+@media only screen
+and (max-width: 500px){.image-slider .container, .slides_container, .slides_container div.slide{height:80px;}}
+
+@media only screen
+and (max-width: 400px){.image-slider .container, .slides_container, .slides_container div.slide{height:60px;}}

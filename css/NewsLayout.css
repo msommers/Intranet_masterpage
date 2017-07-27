@@ -1,0 +1,78 @@
+﻿/* News Layout CSS Styles */
+
+/* Hide Left Side Navigation */
+#sideNavBox {display: none;}
+
+/* Remove margin on content area */
+#contentBox{margin-left: 0px;}
+
+#DeltaPlaceHolderMain,
+div.article, div.welcome,
+.article-content, .welcome-content{
+padding-top:0px;
+margin-top: 0px;}
+
+
+#contentRow{padding: 0px;}
+
+#s4-bodyContainer{padding-bottom: 0px;}
+
+
+/* Hide Page Title */
+#pageTitle{display: none;}
+
+/* Page Layout Styles */
+#news-layout{
+	max-width: 1400px;
+	margin: 0px auto;
+	font-family:'AkzidenzGroteskPro';
+}
+
+/* News Content Container */
+
+.news-contentcontainer{
+	background-color:#ffffff;
+	box-shadow:0 2px 4px 0 rgba(149, 149, 149, 0.4);
+	padding:25px;
+	margin: 40px 40px 60px 40px;
+}
+
+/* News Image */
+.news-captioned-image{display: table-cell; vertical-align: top;}
+.news-captioned-image .image{}
+.news-captioned-image .image img{width: 250px; padding-top: 5px;}
+
+.news-caption{}
+
+.news-header{display: table-cell; vertical-align: top; padding-left: 30px;}
+
+/* News Date/Byline */
+.news-title{font-size: 28px; padding: 0px 0px 10px 0px; font-family:'AkzidenzGroteskPro-MD'; color: #292828;}
+.news-title input.ms-long {width: 99%;}
+.news-byline{font-size: 16px; padding: 0px 0px 10px 0px;}
+.news-date-line{font-size: 16px; padding: 0px 0px 10px 0px;}
+
+/* News Content */
+.news-content{
+	padding: 10px 0px 10px 0px;
+	font-size: 18px;
+	line-height: 32px;
+	color: #575D6C;
+}
+
+/* Tablet Landscape (All Screens Up to 1024px) */
+@media only screen 
+and (max-width: 1024px){
+}
+
+/* Tablet Portait (All Screens Up to 768px) */
+@media only screen 
+and (max-width: 768px){
+.news-captioned-image{display: block;}
+.news-header{display: block; padding-left: 0px;}
+.news-captioned-image .image img{width: 100%; padding-top: 5px; padding-bottom: 15px;}
+}
+/* Phone Portait (All Screens Up to 480px) */
+@media only screen 
+and (max-width: 480px){
+}
