@@ -96,23 +96,16 @@
     });
     $(document).ready(function() {
       function applyJquery() {
-    // ------ Banner - WP 6
-    $("#MSOZoneCell_WebPartWPQ6").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
+    // ------ Banner - WP 5
+    $("#MSOZoneCell_WebPartWPQ5").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
     // ------ IT Functions  WP 2
-    $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ2").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
-    $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
+    $("#WebPartTitleWPQ2").css("background-color", "#54C0EB");
     $("#WebPartWPQ2").removeClass("ms-WPBorder");
-    // ------- Quick Links --- WP 5
-
-    $("#MSOZoneCell_WebPartWPQ5").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ5 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#WebPartTitleWPQ5").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
-    $("#WebPartWPQ5").css("width", "100%").removeClass("ms-WPBorder");
-    // -------- Our Team --- WP 4
-    $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#WebPartTitleWPQ4").css("background-color", "#F89C05").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    // ------- Quick Links --- WP 4
+    $("#WebPartTitleWPQ4").css("background-color", "#64A41F");
+    $("#WebPartWPQ4").css("width", "100%").removeClass("ms-WPBorder");
+    // -------- Our Team --- WP 3
+    $("#WebPartTitleWPQ3").css("background-color", "#F89C05");
     $("#OurTeam").css("padding", "32px 15px 30px 15px");
     $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("display", "none");
     $("#OurTeam > div > div.contact-item > div.contact-item > hr").after("<div class='it-team-view-all'><a href='https://insulet.sharepoint.com/sites/IntranetDev/IT/Pages/members.aspx'>View All</a></div>");
@@ -120,14 +113,13 @@
     //------------ Logo
     $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
     $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
-    // -------- Ticker WP7
-    $("#MSOZoneCell_WebPartWPQ7").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ7 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#WebPartTitleWPQ7").css("background-color", "#293896").css("color", "white").css("height", "38px").css("padding-top", "15px");
-    // ----- Calender --- WP 3
-    $("#MSOZoneCell_WebPartWPQ3").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#WebPartTitleWPQ3").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    // ------ FAQ --- WP 6
+    $("#WebPartTitleWPQ6").css("background-color", "#293896");
+  // Ensure the first answer is displayed on load
+    $("#ctl00_ctl39_g_a5d370ed_5e22_4bb2_accd_d9842e07c401_csr > div > div > ul > div:nth-child(1) > li.a").css("display", "list-item");
+      // Ensure the first answer icon is rotated on load
+    $("#ctl00_ctl39_g_a5d370ed_5e22_4bb2_accd_d9842e07c401_csr > div > div > ul > div:nth-child(1) > li.q > img").addClass("rotate");
+
     }
       setTimeout(applyJquery, 1000);
     });

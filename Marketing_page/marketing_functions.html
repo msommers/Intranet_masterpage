@@ -106,61 +106,38 @@
 $(document).ready(function() {
   function applyJquery() {
     // ----- Markting functions WP#: 5
-    $("#MSOZoneCell_WebPartWPQ5").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ5").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
-    $("#WebPartTitleWPQ5 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-
+    $("#WebPartTitleWPQ5").css("background-color", "#54C0EB");
     //------- FAQ
-    $("#WebPartTitleWPQ2").css("background-color", "rgba(41,56,150,0.63)").css("color", "white").css("height", "38px").css("padding-top", "15px");
-    $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr").css("padding-left", "15px");
-    // Co
-    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(1) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
-    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(2) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
-    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(3) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
-    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(4) > li.q").css("font-family","AkzidenzGroteskPro-Bold");
+    $("#WebPartTitleWPQ2").css("background-color", "rgba(41,56,150,0.63)");
     // Ensure the first answer is displayed on load
     $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(1) > li.a").css("display", "list-item");
     // Ensure the first answer icon is rotated on load
     $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(1) > li.q > img").addClass("rotate");
-
     // Controls the height of individual q/a boxes
-    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(2) > li.q").css("padding", "5px 0px 10px 0px");
-    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(3) > li.q").css("padding", "5px 0px 10px 0px");  $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(4) > li.q").css("padding", "5px 0px 10px 0px");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(1) > li.q").css("padding", "5px 0px 8px 0px");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(2) > li.q").css("padding", "5px 0px 8px 0px");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(3) > li.q").css("padding", "5px 0px 8px 0px");
+    $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul > div:nth-child(4) > li.q").css("padding", "5px 0px 8px 0px");
     $("#ctl00_ctl39_g_331349b2_cb4c_43f2_aa8c_e5e1df5bf486_csr > div > div > ul").css("padding-bottom", "7px");
-
-
-
-
     // ---- OUR Team
-    $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#WebPartTitleWPQ4").css("background-color", "#F89C05").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ4").css("background-color", "#F89C05");
     $("#OurTeam").css("padding", "32px 15px 30px 15px");
-
-    // $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("margin-left", "360px");
     $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("display", "none");
     $("#OurTeam > div > div.contact-item > div.contact-item > hr").after("<div class='mkt-team-view-all'><a href='https://insulet.sharepoint.com/sites/IntranetDev/Marketing/Pages/members.aspx'>View All</a></div>");
     $(".mkt-team-view-all").css("text-align", "right").css("padding-right", "15px").css("float","right").css("margin-bottom","31px");
 
-// Logo
-  $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
-  $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
+    //   Logo
+    $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
+    $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
 
     // ------ Banner
-    $("#MSOZoneCell_WebPartWPQ7").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
-
+    $("#MSOZoneCell_WebPartWPQ7").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
     // ----- Quick Tools
-    $("#MSOZoneCell_WebPartWPQ3").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#WebPartTitleWPQ3").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
+    $("#WebPartTitleWPQ3").css("background-color", "#64A41F");
 
     // - Cal & event-dates
-    $("#MSOZoneCell_WebPartWPQ6").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-    $("#WebPartTitleWPQ6 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    $("#WebPartTitleWPQ6").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
-    // $("#WebPartWPQ7_ChromeTitle").css("margin-bottom", "-2px");
+    $("#WebPartTitleWPQ6").css("background-color", "#54C0EB");
+
   }
     setTimeout(applyJquery, 1000);
 

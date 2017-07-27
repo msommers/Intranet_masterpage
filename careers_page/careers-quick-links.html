@@ -3,111 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script type='text/javascript'>
-      $(document).ready(function() {
-        function applyJquery() {
-        // ------ Banner WP 5
-        $("#MSOZoneCell_WebPartWPQ5").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
-        // ---- Open positions WP 4
-        $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-        $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#WebPartTitleWPQ4").css("background-color", "#54C0EB").css("height", "38px").css("padding-top", "15px");
-        $("#WebPartWPQ4").css("padding-left", "15px").css("padding-bottom", "15px").css("padding-top", "15px");
-        $("#MSOZoneCell_WebPartWPQ4 > div.ms-webpart-chrome.ms-webpart-chrome-vertical.ms-webpart-chrome-fullWidth").after("<a href='https://internal-insulet.icims.com/'><div class='op-view-all'>View All</div></a>");
-        $(".op-view-all").css("padding-bottom", "15px").css("padding-right", "15px").css("text-align", "right");
-        $("#WebPartTitleWPQ4 > h2 > a > nobr > span").css("color", "white").css("padding-left", "15px").css("text-transform", "none");
-        $(".ms-vb-title").css("font-family","AkzidenzGroteskPro-Bold").css("color", "blue");
-        $(".ms-vb-title > div > a").css('color', 'rgb(50, 101, 140)').css("font-size", "14px");
-
-
-        $("tbody > tr").each(function(){
-          $(this).after("<hr class='add-hr'>");
-          $(this).last("display", "none");
-        });
-
-        $("#WebPartWPQ4 >  table > tbody > hr").css("display", "none");
-        // $("tbody > tr:nth-child(3) > td.ms-vb-title").removeAttr("href");
-        $(".ms-viewheadertr").css("display", "none");
-
-
-
-        // --- Quick Tools WP 6
-        $("#MSOZoneCell_WebPartWPQ6").css("padding", "0px").css("background-color", "rgba(216,216,216,0.39)");
-        $("#WebPartTitleWPQ6 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#WebPartTitleWPQ6").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
-        $("#WebPartWPQ6").css("width", "100%");
-
-        // --- Our Team WP 2
-        $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-        $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#WebPartTitleWPQ2").css("background-color", "#F89C05").css("color", "white").css("height", "38px").css("padding-top", "15px");
-        $("#OurTeam").css("padding", "32px 15px 30px 15px");
-          $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("display", "none");
-          $("#OurTeam > div > div.contact-item > div.contact-item > hr").after("<div class='hr-team-view-all'><a href='https://insulet.sharepoint.com/sites/IntranetDev/HR/Pages/members.aspx'>View All</a></div>");
-          $(".hr-team-view-all").css("text-align", "right").css("padding-right", "15px").css("float","right").css("margin-bottom","32px");
-
-
-        // ---- FAQ WP 3
-        $("#WebPartTitleWPQ3").css("background-color", "rgba(41,56,150,0.63)").css("color", "white").css("height", "38px").css("padding-top", "15px");
-        $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#MSOZoneCell_WebPartWPQ3").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-        $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr").css("padding-left", "15px");
-
-
-
-
-        // Logo
-          $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
-          $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
-      }
-        setTimeout(applyJquery, 1500);
-
-      });
-    </script>
-
     <style type='text/css'>
     .add-hr {
       color: grey;
       width: 175%;
       background-color: grey;
-      /*height: 1px;
-      width: 100%;*/
     }
 
     .quick-links-container {
       width: 370px;
-      /*width: 100%;*/
-      /*height: 400px;*/
       background-color: transparent;
       background: transparent;
       border-color: transparent;
-      /*background-color: blue;*/
-      /*border: 1px black solid;*/
     }
     .link-container {
-      /*width: 49%;*/
       box-shadow: 0 2px 4px 0 rgba(149, 149, 149, 0.4);
       height: 150px;
-      /*float: left;*/
       background-color: transparent;
       background: transparent;
       font-family: 'AkzidenzGroteskPro-Bold';
-
     }
-
-    /*.img-background-container {
-        background-color: #0084b4;
-        width: 70px;
-        height: 70px;
-        margin-left: 20px;
-        margin-top: 20px;
-    }*/
 
     .link-font {
       font-size: 18px;
     }
     .text-one {
-      /*margin-top: 15px;*/
+
       margin-left: 100px;
       text-align: left;
       width: 225px;
@@ -115,14 +36,10 @@
       padding-bottom: 30px;
       color: #1A96B5;
       letter-spacing: 1px;
-      /*padding-right: 50px;*/
-      /*padding-left: 50px;*/
     }
-
 
     .file-img {
       width: 40px;
-      /*background-color:  #0084b4;*/
       padding: 5px;
       height: 40px;
       margin-left: 20px;
@@ -138,13 +55,11 @@
     $(document).ready(function() {
       function applyJquery() {
         // ------ Banner WP#: 6
-        $("#MSOZoneCell_WebPartWPQ6").css("background", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
+        $("#MSOZoneCell_WebPartWPQ6").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
 
         // ---- Open positions WP#: 4
-        $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-        $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#WebPartTitleWPQ4").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
 
+        $("#WebPartTitleWPQ4").css("background-color", "#54C0EB");
         $("#1 > a").removeAttr("href").attr("href", "https://internal-insulet.icims.com/jobs/1866/territory-manager---atlanta-north/job");
         $("#2 > a").removeAttr("href").attr("href", "https://internal-insulet.icims.com/jobs/1845/technical-writer-ux-%28temporary-contract%29/job");
         $("#3 > a").removeAttr("href").attr("href", "https://internal-insulet.icims.com/jobs/1824/sr.-sales-operations-analyst/job");
@@ -165,35 +80,53 @@
         $("tbody > tr:nth-child(15) > td:nth-child(3) > nobr").before("<span>Posted on </span>");
 
 
+
+        $("#WebPartWPQ4").css("padding-left", "15px").css("padding-bottom", "15px").css("padding-top", "15px");
+        $("#MSOZoneCell_WebPartWPQ4 > div.ms-webpart-chrome.ms-webpart-chrome-vertical.ms-webpart-chrome-fullWidth").after("<a href='https://internal-insulet.icims.com/'><div class='op-view-all'>View All</div></a>");
+        $(".op-view-all").css("padding-bottom", "15px").css("padding-right", "15px").css("text-align", "right");
+        $("#WebPartTitleWPQ4 > h2 > a > nobr > span").css("color", "white").css("padding-left", "15px").css("text-transform", "none");
+        $(".ms-vb-title").css("font-family","AkzidenzGroteskPro-Bold").css("color", "blue");
+        $(".ms-vb-title > div > a").css('color', 'rgb(50, 101, 140)').css("font-size", "14px");
+
+
+        $("tbody > tr").each(function(){
+          $(this).after("<hr class='add-hr'>");
+          $(this).last("display", "none");
+        });
+
+        $("#WebPartWPQ4 >  table > tbody > hr").css("display", "none");
+        // $("tbody > tr:nth-child(3) > td.ms-vb-title").removeAttr("href");
+        $(".ms-viewheadertr").css("display", "none");
+
+
         // --- Quick Tools WP#: 5
-
-
-        $("#MSOZoneCell_WebPartWPQ5").css("padding", "0px").css("background", "transparent").css("background-color", "transparent").css("margin-bottom", "20px");
-        $("#WebPartTitleWPQ5 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#WebPartTitleWPQ5").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
+        // $("#MSOZoneCell_WebPartWPQ5").css("margin-bottom", "20px");
+        $("#WebPartTitleWPQ5").css("background-color", "#64A41F");
         $("#WebPartWPQ5").css("width", "100%");
 
         // --- Our Team WP#: 2
-        $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-        $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#WebPartTitleWPQ2").css("background-color", "#F89C05").css("color", "white").css("height", "38px").css("padding-top", "15px");
+        $("#WebPartTitleWPQ2").css("background-color", "#F89C05");
         $("#OurTeam").css("padding", "32px 15px 30px 15px");
-        $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("text-align", "right");
+        $("#OurTeam > div > div.contact-item > div.contact-item > div.AllLink").css("display", "none");
+        $("#OurTeam > div > div.contact-item > div.contact-item > hr").after("<div class='hr-team-view-all'><a href='https://insulet.sharepoint.com/sites/IntranetDev/HR/Pages/members.aspx'>View All</a></div>");
+        $(".hr-team-view-all").css("text-align", "right").css("padding-right", "15px").css("float","right").css("margin-bottom","32px");
+
+
+
 
         // ---- FAQ WP#: 3
-        $("#WebPartTitleWPQ3").css("background-color", "rgba(41,56,150,0.63)").css("color", "white").css("height", "38px").css("padding-top", "15px");
-        $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-        $("#MSOZoneCell_WebPartWPQ3").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-        $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr").css("padding-left", "15px");
+        $("#WebPartTitleWPQ3").css("background-color", "rgba(41,56,150,0.63)");
         // $("#\7b 561786C7-2AEA-4052-B7EA-F2AAEDFA6D38\7d -\7b BBE11D0E-05DD-4733-B5EC-F6E40C677CE0\7d > tbody > tr:nth-child(3) > td:nth-child(1) > a").css("color", "blue");
-        $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(1) > li.q").css("display", "list-item").css('font-family', 'AkzidenzGroteskPro-Bold');
-        $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(2) > li.q").css("display", "list-item").css('font-family', 'AkzidenzGroteskPro-Bold');
-        $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(3) > li.q").css("display", "list-item").css('font-family', 'AkzidenzGroteskPro-Bold');
-        $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div > li.q").css("font-family","AkzidenzGroteskPro-Bold");
+        // $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(1) > li.q").css("display", "list-item").css('font-family', 'AkzidenzGroteskPro-Bold');
+        // $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(2) > li.q").css("display", "list-item").css('font-family', 'AkzidenzGroteskPro-Bold');
+        // $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(3) > li.q").css("display", "list-item").css('font-family', 'AkzidenzGroteskPro-Bold');
+        // $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div > li.q").css("font-family","AkzidenzGroteskPro-Bold");
         $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(1) > li.q > img").addClass("rotate");
         $("#ctl00_ctl39_g_ecdcf5b6_5489_474a_9294_ce80e74910ee_csr > div > div > ul > div:nth-child(1) > li.a").css("display", "list-item");
 
-
+    // Logo
+      $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
+      $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
 
 
 

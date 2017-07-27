@@ -128,50 +128,28 @@
       $(document).ready(function() {
         function applyJquery() {
       // ------- Banner 9
-      $("#MSOZoneCell_WebPartWPQ9").css("padding", "0px").css("background", "transparent").css("background-color", "transparent").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
+      $("#MSOZoneCell_WebPartWPQ9").css("box-shadow", "0 0 0 0").css("margin", "auto auto 0px auto");
       $("#ctl00_ctl39_g_48ef8a30_58cf_4b20_8499_a81ab856aec1_csr1_2lines_line2").css("text-align", "center").css("padding", "20px 60px 30px 60px");
-
-  // ------- Mission and Guidding Principles WP#: 2
-      $("#WebPartWPQ2_ChromeTitle").css("margin-bottom", "-2px");
-      $("#WebPartTitleWPQ2").css("background-color", "#293896").css("color", "white").css("height", "38px").css("padding-top", "15px");
-      $("#MSOZoneCell_WebPartWPQ2").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-      $("#WebPartTitleWPQ2 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-    // ------- Together We Grow WP#: 5
-      $("#MSOZoneCell_WebPartWPQ5").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-      $("#WebPartTitleWPQ5").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
-      $("#WebPartTitleWPQ5 > h2 > nobr > span:nth-child(1)").css("padding-left", "15px").css("color", "white").css("text-transform", "none");
-
-  // ------- You make the Difference WP#: 8
-      $("#MSOZoneCell_WebPartWPQ8").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-      $("#WebPartTitleWPQ8").css("background-color", "#54C0EB").css("color", "white").css("height", "38px").css("padding-top", "15px");
-      $("#WebPartTitleWPQ8 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-
-// Logo
-  $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
-  $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
-
+      // ------- Mission and Guidding Principles WP#: 2
+      $("#WebPartTitleWPQ2").css("background-color", "#293896");
+      // ------- Together We Grow WP#: 5
+      $("#WebPartTitleWPQ5").css("background-color", "#64A41F");
+      // ------- You make the Difference WP#: 8
+      $("#WebPartTitleWPQ8").css("background-color", "#54C0EB");
+      // Logo
+      $("#ctl00_onetidProjectPropertyTitleGraphic").removeAttr("href");
+      $("#ctl00_onetidProjectPropertyTitleGraphic").attr("href","https://insulet.sharepoint.com/sites/IntranetDev/Pages/default.aspx");
       // ------- Community 3
-      $("#MSOZoneCell_WebPartWPQ3").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-      $("#WebPartTitleWPQ3 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-      $("#WebPartTitleWPQ3").css("background-color", "#64A41F").css("color", "white").css("height", "38px").css("padding-top", "15px");
-  // ------- RITE WP#: 4
-      $("#MSOZoneCell_WebPartWPQ4").css("padding", "0px");
-      $("#WebPartTitleWPQ4 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-      $("#WebPartTitleWPQ4").css("background-color", "#F89C04").css("color", "white").css("height", "38px").css("padding-top", "15px");
+      $("#WebPartTitleWPQ3").css("background-color", "#64A41F");
+      // ------- RITE WP#: 4
+      $("#WebPartTitleWPQ4").css("background-color", "#F89C04");
       // ------- Welcome tuesday 7
-      $("#MSOZoneCell_WebPartWPQ7").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-      $("#WebPartTitleWPQ7 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-      $("#WebPartTitleWPQ7").css("background-color", "#293896").css("color", "white").css("height", "38px").css("padding-top", "15px");
-  // ------- Lunch with leaders WP#: 6
-      $("#MSOZoneCell_WebPartWPQ6").css("padding", "0px").css("background", "transparent").css("background-color", "transparent");
-      $("#WebPartTitleWPQ6 > h2 > nobr > span:nth-child(1)").css("color", "white").css("text-transform", "none").css("padding-left", "15px");
-      $("#WebPartTitleWPQ6").css("background-color", "#F89C04").css("color", "white").css("height", "38px").css("padding-top", "15px");
-
-
-
-    $('#gpl-contentcontainer > div.gpl-leftcolumn > div.gpl-bottomzone').each(function () {
-        $(this).insertBefore($(this).prev('#gpl-contentcontainer > div.gpl-leftcolumn > div.gpl-topmiddlezone'));
-    });
+      $("#WebPartTitleWPQ7").css("background-color", "#293896");
+      // ------- Lunch with leaders WP#: 6
+      $("#WebPartTitleWPQ6").css("background-color", "#F89C04");
+      $('#gpl-contentcontainer > div.gpl-leftcolumn > div.gpl-bottomzone').each(function () {
+          $(this).insertBefore($(this).prev('#gpl-contentcontainer > div.gpl-leftcolumn > div.gpl-topmiddlezone'));
+      });
 
     }
       setTimeout(applyJquery, 10);

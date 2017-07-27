@@ -223,11 +223,15 @@ display:none;
 
 /*Remove title formatting*/
 .ms-webpart-chrome-title {
-	margin-bottom:-2px;
+	margin-bottom:-3px;
+	height: 55px;
 }
 
 ul.cbs-List {
 	margin:0px;
+	/*padding-top: 15px;
+	padding-left: 15px;
+	padding-bottom: 15px;*/
 	width: 100%;
 }
 
@@ -276,6 +280,7 @@ color:#0b1f8f;
 font-size:20px;
 font-family: 'AkzidenzGroteskPro-MD';
 padding-bottom:10px;
+margin-top: 15px;
 }
 
 .ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
@@ -395,7 +400,7 @@ ul.faq {
 	margin:0px;
 }
 ul.faq .item{
-	padding: 7px 0px 10px 0px;
+	padding: 7px 0px 10px 15px;
 	color:#060606;
 	font-size:16px;
 	border-bottom: 1px #d5d5da solid;
@@ -410,6 +415,7 @@ ul.faq li.q img {
 }
 ul.faq .item li.q{
 	padding: 10px 0px 10px 0px;
+	font-family: "AkzidenzGroteskPro-Bold";
 }
 
 ul.faq .item li.a{
@@ -757,7 +763,8 @@ display:none;
 
 /*Remove title formatting*/
 .ms-webpart-chrome-title {
-	margin-bottom:-2px;
+	margin-bottom:-3px;
+	height: 55px;
 }
 
 /*Web Part Titles*/
@@ -768,6 +775,7 @@ font-family: 'AkzidenzGroteskPro-MD';
 padding-bottom:10px;
 text-transform: none;
 padding-left: 15px;
+/*margin-top: 15px;*/
 }
 
 .ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
