@@ -760,15 +760,16 @@ display:none;
 
 /*Web Part Titles*/
 .ms-webpart-titleText {
-color:#0b1f8f;
+color:#ffffff;
 font-size:20px;
 font-family: 'AkzidenzGroteskPro-MD';
 padding-bottom:10px;
-text-transform: uppercase;
+text-transform: none;
+padding-left: 15px;
 }
 
 .ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
-	color:#0b1f8f;
+	color:#ffffff;
 	font-size:20px;
 	font-family: 'AkzidenzGroteskPro-MD';
 }
