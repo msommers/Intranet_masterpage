@@ -127,9 +127,10 @@ margin-right:0px;
 
 /*web part container style*/
 .ms-webpartzone-cell {
-background-color:#ffffff;
+background-color: transparent;
+background: transparent;
 box-shadow:0 2px 4px 0 rgba(149, 149, 149, 0.4);
-padding:25px;
+/*padding:25px;*/
 }
 
 /*web part container style*/
@@ -611,9 +612,10 @@ min-width: 0px;
 
 /*web part container style*/
 .ms-webpartzone-cell {
-background-color:#ffffff;
+background-color:transparent;
+background: transparent;
 box-shadow:0 2px 4px 0 rgba(149, 149, 149, 0.4);
-padding: 25px;
+/*padding: 25px;*/
 }
 
 /*web part container style*/
